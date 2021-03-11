@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import App from "./App";
 import "../css/normalize.css";
 import HelloWorld from "./HelloWorld/HelloWorld";
 
 const app = document.getElementById("app");
 
 ReactDOM.render(
-    <HelloWorld />,
+    <React.StrictMode>
+        <App />
+        <HelloWorld />
+    </React.StrictMode>,
     app,
 );

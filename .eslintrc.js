@@ -27,6 +27,16 @@ module.exports = {
     "max-len": ["error", { "code": 120 }],
     "no-loop-func": 1,
     "linebreak-style": ["error", "unix"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+      }
+    ]
   },
   "settings": {
     "react": {
@@ -50,6 +60,11 @@ module.exports = {
       // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
       "Hyperlink",
       { "name": "Link", "linkAttribute": "to" }
-    ]
+    ], 
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 };
