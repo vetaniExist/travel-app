@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/app.scss";
 
 const App: React.FC = () => {
   const [state, setState] = useState(1);

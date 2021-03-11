@@ -16,7 +16,26 @@ module.exports = {
   target: 'web',
   devtool: 'source-map',
   module: {
-    rules: [
+    rules: [{
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [{
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
       {
         enforce: "pre",
         test: /\.jsx?$/,
@@ -45,14 +64,17 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /(node_modules)/,
-        use: [
-          {
+        use: [{
             loader: 'babel-loader',
-            options: { plugins: ['react-refresh/babel'] },
+            options: {
+              plugins: ['react-refresh/babel']
+            },
           },
           {
             loader: 'ts-loader',
-            options: { transpileOnly: true },
+            options: {
+              transpileOnly: true
+            },
           },
         ],
       },
@@ -60,12 +82,10 @@ module.exports = {
         // Loads the javacript into html template provided.
         // Entry point is set below in HtmlWebPackPlugin in Plugins
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            //options: { minimize: true }
-          }
-        ]
+        use: [{
+          loader: "html-loader",
+          //options: { minimize: true }
+        }]
       },
       {
         test: /\.css$/,
@@ -74,7 +94,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif|mp3|wav)$/,
         use: ['file-loader']
-      }
+      },
     ]
   },
   plugins: [
