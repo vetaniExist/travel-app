@@ -1,7 +1,7 @@
-const path = require("path")
+const path = require("path");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const webpack = require('webpack')
-const HtmlWebPackPlugin = require("html-webpack-plugin")
+const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -105,8 +105,13 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      favicon: "../src/html/favicon.ico",
+      template: './src/html/index.html'
+    })
+
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
   }
-}
+};
