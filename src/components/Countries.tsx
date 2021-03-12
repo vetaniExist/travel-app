@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/app.scss';
 import Cards from "./Cards";
+import { storeExample } from '../store.example';
 
 function Countries() {
   return (
@@ -9,14 +10,7 @@ function Countries() {
         Countries
       </h3>
       <div className="countries__container">
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-        <Cards/>
+        <Cards countriesInfo={storeExample} />
       </div>
     </div>
   )
