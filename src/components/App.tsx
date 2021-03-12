@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/app.scss";
+import Footer from "./Footer";
 
 const App: React.FC = () => {
-  const [state, setState] = useState(1);
   return (
     <>
-      <header></header>
-      <main></main>
-      <footer></footer>
+      <header className="header">Header</header>
+      <main className="main">Main</main>
+      <footer >
+        <Footer/>
+      </footer>
+
     </>
   );
 };
