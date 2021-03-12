@@ -6,24 +6,39 @@ body, #app {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.countries {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
 
-.header {
-    color: red;
+    &__countries_header {
+        padding-left: 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
 }
 
-.main {
-    color: yellow;
-    width: 100vw;
+.card {
+    width: 370px;
+    height: 370px;
+    margin: 20px;
+    background-color: chartreuse;
+
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
+    //width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
