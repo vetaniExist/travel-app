@@ -27,8 +27,14 @@ module.exports = {
     ]
   },
   module: {
-    rules: [
-      {
+    rules: [{
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!sass-loader',
+        }),
+      }; {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
@@ -38,13 +44,14 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /(node_modules)/,
-        use: [
-          {
+        use: [{
             loader: 'babel-loader',
           },
           {
             loader: 'ts-loader',
-            options: { transpileOnly: true },
+            options: {
+              transpileOnly: true
+            },
           },
         ],
       },
@@ -52,18 +59,20 @@ module.exports = {
         // Loads the javacript into html template provided.
         // Entry point is set below in HtmlWebPackPlugin in Plugins 
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: { minimize: true }
+        use: [{
+          loader: "html-loader",
+          options: {
+            minimize: true
           }
-        ]
+        }]
       },
       {
         // Loads images into CSS and Javascript files
         // url-loader dont work with wav format?
         test: /\.(png|svg|jpg|gif|mp3|wav)$/,
-        use: [{ loader: "url-loader" }]
+        use: [{
+          loader: "url-loader"
+        }]
       },
       {
         // Loads CSS into a file when you import it via Javascript

@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+
 import Header from './Header/Header';
+import React from "react";
+import "../css/app.scss";
+import Footer from "./Footer";
+import Countries from './Countries'
 
 const App: React.FC = () => {
-  const [state, setState] = useState(1);
   return (
     <>
       <Header/>
-      <main></main>
-      <footer></footer>
+      <main className="main">
+        <p>Slider</p>
+        <Countries />
+      </main>
+
+      <footer >
+        <Footer/>
+      </footer>
     </>
   );
 };
