@@ -8,8 +8,8 @@
     "dev": "(If exist \"dist\"  rd /s /q dist) && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
     "prod": "(If exist \"dist\"  rd /s /q dist) && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
     "start": "node ./dist/server.js",
-    "lint": "eslint ./**/*.js ./**/*.jsx",
-    "lintf": "eslint --fix ./**/*.js ./**/*.jsx",
+    "lint": "eslint ./**/*.js ./**/*.ts ./**/*.tsx",
+    "lintf": "eslint --fix ./**/*.js ./**/*.ts ./**/*.tsx",
     "lintp": "eslint"
   },
   "repository": {
