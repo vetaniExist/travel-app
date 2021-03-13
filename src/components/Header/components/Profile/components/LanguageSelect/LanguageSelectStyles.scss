@@ -1,0 +1,39 @@
+.dropdownContainer {
+    height: 45px;
+    border-radius: 30px;
+    overflow: hidden;
+    background: url('/src/assets/icons/language_icon.svg') 90% / 40% no-repeat;
+    cursor: pointer;
+    z-index: 2;
+    box-sizing: border-box;
+    border: 3px solid #00000000;
+    border-radius: 30px;
+}
+
+.dropdownContainer select {
+    color: black;
+    background: transparent;
+    width: 70px;
+    font-size: 16px;
+    border: none;
+    height: 34px; 
+    outline: none;
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    color: $light-font-color;
+    
+    box-sizing: border-box;
+}
+select:focus, select:hover {
+    color: #FF385C;
+}
+
+select:hover .dropdownContainer, .dropdownContainer:hover {
+    border: 3px solid $light-font-color;
+    border-radius: 30px;
+    box-sizing: border-box;
+}

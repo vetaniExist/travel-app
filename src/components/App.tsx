@@ -1,3 +1,5 @@
+
+import Header from './Header/Header';
 import React from "react";
 import "../css/app.scss";
 import Footer from "./Footer";
@@ -6,7 +8,7 @@ import Countries from './Countries'
 const App: React.FC = () => {
   return (
     <>
-      <header className="header">Header</header>
+      <Header/>
       <main className="main">
         <p>Slider</p>
         <Countries />
@@ -15,7 +17,6 @@ const App: React.FC = () => {
       <footer >
         <Footer/>
       </footer>
-
     </>
   );
 };

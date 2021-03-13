@@ -102,6 +102,7 @@ module.exports = {
       favicon: "./src/html/favicon.ico",
       template: "./src/html/index.html",
       filename: "./index.html",
+      // favicon: "../src/html/favicon.ico",
       excludeChunks: ['']
     }),
     new webpack.HotModuleReplacementPlugin(),
