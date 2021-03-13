@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/app.scss";
 import Footer from "./Footer";
 import Countries from './Countries'
+import CountryPage from "./CountryPage";
 
 const App: React.FC = () => {
+
+  const[] = useState();
+
   return (
     <>
       <header className="header">Header</header>
@@ -11,6 +15,8 @@ const App: React.FC = () => {
         <p>Slider</p>
         <Countries />
       </main>
+
+      <CountryPage />
 
       <footer >
         <Footer/>
