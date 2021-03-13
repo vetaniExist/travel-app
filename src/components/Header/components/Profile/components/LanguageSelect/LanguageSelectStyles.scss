@@ -2,7 +2,7 @@
     height: 45px;
     border-radius: 30px;
     overflow: hidden;
-    background: url('/src/assets/icons/language_icon.svg') 90% / 40% no-repeat;
+    background: url('/src/assets/icons/language_icon.svg') 90% / 35% no-repeat;
     cursor: pointer;
     z-index: 2;
     box-sizing: border-box;
@@ -14,6 +14,7 @@
     color: black;
     background: transparent;
     width: 70px;
+    height: 100%;
     font-size: 16px;
     border: none;
     height: 34px; 
@@ -25,11 +26,16 @@
     cursor: pointer;
     z-index: 1;
     color: $light-font-color;
-    
     box-sizing: border-box;
 }
-select:focus, select:hover {
-    color: #FF385C;
+
+.dropdownContainer select option {
+    margin-top: 10px;
+    color: $dark-font-color;
+}
+
+.dropdownContainer select option:hover {
+    background-color: $main-color;
 }
 
 select:hover .dropdownContainer, .dropdownContainer:hover {
