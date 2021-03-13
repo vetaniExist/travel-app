@@ -1,0 +1,40 @@
+.profileItemContainer {
+    max-width: 150px;
+    height: 10px;
+    border-radius: 30px;
+    border: 3px solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.userName {
+    color: #FFFFFF
+}
+
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.menu {
+    cursor: pointer;
+    position: relative;
+}
+
+.menu svg:hover line { 
+    stroke: #FF385C;
+}
+
+.menuItems {
+    max-width: 250px;
+    position: absolute;
+    top: 2.5em;
+}
