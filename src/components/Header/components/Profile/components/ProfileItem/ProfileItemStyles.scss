@@ -1,8 +1,8 @@
 .profileItemContainer {
     max-width: 150px;
-    height: 10px;
+    height: 40px;
     border-radius: 30px;
-    border: 3px solid #FFFFFF;
+    border: 1px solid $light-font-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .userName {
-    color: #FFFFFF
+    color: $light-font-color;
 }
 
 .userProfile {
@@ -24,9 +24,22 @@
     column-gap: 1em;
 }
 
+.userProfile img{
+    width: 25px;
+    height: 25px;
+}
+
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     position: relative;
+}
+
+.menu svg {
+    width: 25px;
+    height: 25px;
 }
 
 .menu svg:hover line { 

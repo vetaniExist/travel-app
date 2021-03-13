@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import languageIcon from '../../../../../../assets/icons/language_icon.svg';
-import './LanguageSelectStyles.css';
 
 const LANGUAGES = {
     EN: {
@@ -24,7 +22,7 @@ const LanguageSelect = () => {
   const defaultLanguage = localStorage.language ? localStorage.language : 'English';
   const [language, setLanguage] = useState(defaultLanguage);
 
-  const handleChange = (value) => {
+  const handleChange = (value: { target: { value: any; }; }) => {
     setLanguage(value.target.value);
     localStorage.language = value.target.value;
   }

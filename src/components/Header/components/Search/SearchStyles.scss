@@ -1,8 +1,8 @@
 .searchContainer {
-    width: 150px;
-    height: 10px;
+    width: 160px;
+    height: 40px;
     border-radius: 30px;
-    border: 3px solid #FFFFFF;
+    border: 1px solid $light-font-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 input::placeholder{
-    color: #FFFFFF;
+    color: $light-font-color;
   }
 
 .inputSearch {
@@ -18,7 +18,7 @@ input::placeholder{
     border: none;
     outline: none;
     background: none;
-    color: #FFFFFF
+    color: $light-font-color;
 }
 
 .inputSearchIcon {
@@ -28,14 +28,15 @@ input::placeholder{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #FF385C;
+    background-color: $main-color;
     border: none;
     cursor: pointer;
     outline: none;
+    margin-right: 10px;
 }
 
 .inputSearchIcon:hover {
-    background-color: #fc718b;
+    background-color: $main-color-hover;
 }
 
 .imgSearchIcon {

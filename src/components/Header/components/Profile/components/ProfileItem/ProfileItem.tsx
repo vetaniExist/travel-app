@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './ProfileItemStyles.css';
 import profileIcon from '../../../../../../assets/icons/user_default_logo.svg';
 import { Button, ButtonGroup }  from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';

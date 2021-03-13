@@ -1,5 +1,4 @@
 import React from 'react';
-import './HeaderStyles.css';
 import Logo from './components/Logo/Logo';
 import Search from './components/Search/Search';
 import Profile from './components/Profile/Profile';

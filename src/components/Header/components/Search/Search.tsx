@@ -1,5 +1,4 @@
 import React from 'react';
-import './SearchStyles.css';
 import magnifierIcon from '../../../../assets/icons/magnifier_icon.svg';
 
 const Search = () => {
