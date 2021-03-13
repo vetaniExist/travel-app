@@ -5,7 +5,7 @@ import logoRSS from '../assets/rsschool.svg';
 import '../css/app.scss';
 
 function Footer () {
-  // @ts-ignore
+
   return (
     <div className="footer">
       <div className="footer__icons_container">
