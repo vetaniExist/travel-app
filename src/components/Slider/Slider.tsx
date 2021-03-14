@@ -7,7 +7,6 @@ const Slider = () => {
     const card = {
       original: country.mainImage,
       originalAlt: country.title,
-      sizes: "100% 70vh ",
     };
     return card;
   });
