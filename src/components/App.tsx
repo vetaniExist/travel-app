@@ -1,21 +1,30 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "../css/app.scss";
+import CountryPage from "./CountryPage/CountryPage";
+import Header from './Header/Header';
 import Footer from "./Footer";
-import Countries from './Countries'
+import Countries from './Countries';
+import Slider from './Slider/Slider';
+
 
 const App: React.FC = () => {
+
+  const[] = useState();
+
   return (
     <>
-      <header className="header">Header</header>
+      <Header/>
       <main className="main">
-        <p>Slider</p>
+        <Slider />
         <Countries />
       </main>
+
+      <CountryPage />
 
       <footer >
         <Footer/>
       </footer>
-
     </>
   );
 };

@@ -3,7 +3,7 @@ import YouTube from "react-youtube";
 // @ts-ignore
 import { gapi } from "gapi-script";
 
-export default function GetVideos() {
+export default function Video() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [videos, setVideos] = useState("");
 
