@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import logoGithub from '../assets/github.svg';
-import logoRSS from '../assets/rsschool.svg';
-import '../css/app.scss';
+import logoGithub from "../assets/github.svg";
+import logoRSS from "../assets/rsschool.svg";
+import "../css/app.scss";
 
-function Footer () {
-
+function Footer() {
   return (
     <div className="footer">
       <div className="footer__icons_container">
@@ -27,8 +26,7 @@ function Footer () {
         <img className="footer__icon" src={logoRSS} alt="" />
       </a>
     </div>
-  )
+  );
 }
 
-export default Footer
-
+export default Footer;

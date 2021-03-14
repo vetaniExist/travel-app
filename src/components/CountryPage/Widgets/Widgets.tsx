@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import Weather from "./Weather/Weather";
 import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
-
 
 function Widgets() {
   return (
@@ -13,7 +12,6 @@ function Widgets() {
       <Currency/>
 
     </>
-
 
   );
 }

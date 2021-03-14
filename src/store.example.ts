@@ -8,22 +8,23 @@ export interface ICountry {
   // map: any;
 }
 
-interface ISights {
-  id: string;
-  images: any;
-  title: string;
-  description: string;
-}
+// interface ISights {
+//   id: string;
+//   images: any;
+//   title: string;
+//   description: string;
+// }
 
-interface IVideo {
-  id: string;
-  video: any;
-}
+// interface IVideo {
+//   id: string;
+//   video: any;
+// }
 
 export const storeExample: ICountry[] = [
-  { name: 'Italy',
-    capital: 'Rome',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "Italy",
+    capital: "Rome",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
     // info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
     // 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
     // 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ' +
@@ -32,48 +33,59 @@ export const storeExample: ICountry[] = [
     // 'occaecat cupidatat non proident, ' +
     // 'sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
-  { name: 'France',
-    capital: 'Paris',
-    mainImage: 'https://picsum.photos/id/1018/1000/600/',
+  {
+    name: "France",
+    capital: "Paris",
+    mainImage: "https://picsum.photos/id/1018/1000/600/",
   },
 ];
