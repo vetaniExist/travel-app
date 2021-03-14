@@ -36,7 +36,6 @@ function CountryPage() {
       <div>
         Video
       </div>
-      <Footer/>
     </div>
   )
 }

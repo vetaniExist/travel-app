@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         enforce: "pre",
-        test: /\.jsx?$/,
+        test: /\.(t|j)sx?$/,
         exclude: /node_modules/,
         loader: "eslint-loader",
         options: {
@@ -99,16 +99,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      favicon: "./src/html/favicon.ico",
       template: "./src/html/index.html",
       filename: "./index.html",
+      // favicon: "../src/html/favicon.ico",
       excludeChunks: ['']
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      favicon: "../src/html/favicon.ico",
-      template: './src/html/index.html'
-    })
 
   ],
   resolve: {

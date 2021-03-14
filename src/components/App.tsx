@@ -1,8 +1,12 @@
+
 import React, { useState } from "react";
 import "../css/app.scss";
-import Footer from "./Footer";
-import Countries from './Countries'
 import CountryPage from "./CountryPage";
+import Header from './Header/Header';
+import Footer from "./Footer";
+import Countries from './Countries';
+import Slider from './Slider/Slider';
+
 
 const App: React.FC = () => {
 
@@ -10,9 +14,9 @@ const App: React.FC = () => {
 
   return (
     <>
-      <header className="header">Header</header>
+      <Header/>
       <main className="main">
-        <p>Slider</p>
+        <Slider />
         <Countries />
       </main>
 
@@ -21,7 +25,6 @@ const App: React.FC = () => {
       <footer >
         <Footer/>
       </footer>
-
     </>
   );
 };
