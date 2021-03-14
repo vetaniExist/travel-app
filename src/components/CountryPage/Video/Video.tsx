@@ -6,13 +6,14 @@ import { gapi } from "gapi-script";
 export default function Video() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [videos, setVideos] = useState("");
+  const [country, setCountry] = useState("Paris");
 
   const arrSearch = {
     part: [
       "snippet",
     ],
     maxResults: 5,
-    q: "Paris attractions",
+    q: `${country} attractions`,
   };
 
   const videoOpts = {
