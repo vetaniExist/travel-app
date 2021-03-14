@@ -27,14 +27,8 @@ module.exports = {
     ]
   },
   module: {
-    rules: [{
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!sass-loader',
-        }),
-      }; {
+    rules: [
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
@@ -45,14 +39,14 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /(node_modules)/,
         use: [{
-            loader: 'babel-loader',
+          loader: 'babel-loader',
+        },
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true
           },
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true
-            },
-          },
+        },
         ],
       },
       {
@@ -77,8 +71,8 @@ module.exports = {
       {
         // Loads CSS into a file when you import it via Javascript
         // Rules are set in MiniCssExtractPlugin
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        test: /\.(scss|css)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
     ]
   },
