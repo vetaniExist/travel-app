@@ -1,33 +1,157 @@
 [
-    "Algeria",
-    "Australia",
-    "Bermuda",
-    "Cambodia",
-    "China",
-    "Costa Rica",
-    "Cuba",
-    "Cyprus",
-    "Djibouti",
-    "Dominican Republic",
-    "Eritrea",
-    "Georgia",
-    "Ghana",
-    "Hong Kong",
-    "Iraq",
-    "Libya",
-    "Malaysia",
-    "Mexico",
-    "Nepal",
-    "New Zealand",
-    "Qatar",
-    "San Marino",
-    "Serbia",
-    "Seychelles",
-    "Slovenia",
-    "Somalia",
-    "Sri Lanka",
-    "Thailand",
-    "Tonga",
-    "Trinidad and Tobago",
-    "Viet Nam"
+    {
+        "name": "Algeria",
+        "capital": "Algiers",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Australia",
+        "capital": "Canberra",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Bermuda",
+        "capital": "Hamilton",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Cambodia",
+        "capital": "Phnom Penh",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "China",
+        "capital": "Beijing",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Costa Rica",
+        "capital": "San Jose",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Cuba",
+        "capital": "Havana",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Cyprus",
+        "capital": "Nicosia",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Djibouti",
+        "capital": "Djibouti",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Dominican Republic",
+        "capital": "Santo Domingo",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Eritrea",
+        "capital": "Asmara",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Georgia",
+        "capital": "Tbilisi",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Ghana",
+        "capital": "Accra",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Hong Kong",
+        "capital": "City of Victoria",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Iraq",
+        "capital": "Baghdad",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Libya",
+        "capital": "Tripoli",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Malaysia",
+        "capital": "Kuala Lumpur",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Mexico",
+        "capital": "Mexico City",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Nepal",
+        "capital": "Kathmandu",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "New Zealand",
+        "capital": "Wellington",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Qatar",
+        "capital": "Doha",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "San Marino",
+        "capital": "City of San Marino",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Serbia",
+        "capital": "Belgrade",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Seychelles",
+        "capital": "Victoria",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Slovenia",
+        "capital": "Ljubljana",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Somalia",
+        "capital": "Mogadishu",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Sri Lanka",
+        "capital": "Colombo",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Thailand",
+        "capital": "Bangkok",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Tonga",
+        "capital": "Nuku'alofa",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Trinidad and Tobago",
+        "capital": "Port of Spain",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    },
+    {
+        "name": "Viet Nam",
+        "capital": "Hanoi",
+        "countryImage": "https://picsum.photos/id/1018/1000/600/"
+    }
 ]
