@@ -20,6 +20,23 @@ export default function Video() {
     width: "640",
   };
 
+  function execute() {
+    setIsLoading(true);
+    return gapi.client.youtube.search.list(arrSearch)
+      .then((response: any) => {
+        const listItem = response.result.items;
+        console.log(listItem);
+        if (listItem) {
+          const listVideo = listItem.map((item: any) => item.id.videoId);
+          console.log(listVideo);
+          setIsLoading(false);
+          setVideos(listVideo);
+        }
+        // Handle the results here (response.result has the parsed body).
+      },
+      (err: Error) => { console.error("Execute error", err); });
+  }
+
   return (
     <>
         
