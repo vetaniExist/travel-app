@@ -3,22 +3,15 @@ import "../css/app.scss";
 import CountryPage from "./CountryPage/CountryPage";
 import Header from "./Header/Header";
 import Footer from "./Footer";
-import Countries from "./Countries";
-import Slider from "./Slider/Slider";
+import MainPage from "./MainPage/MainPage";
 
 const App: React.FC = () => (
     <>
       <Header/>
-      <main className="main">
-        <Slider />
-        <Countries />
-      </main>
-
+      <MainPage/>
       <CountryPage />
 
-      <footer >
-        <Footer/>
-      </footer>
+      <Footer/>
     </>
 );
 
