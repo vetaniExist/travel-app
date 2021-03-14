@@ -5,8 +5,8 @@ import { storeExample } from "../../store.example";
 const Slider = () => {
   const listOfImages:any = storeExample.map((country: any) => {
     const card = {
-      original: country.mainImage,
-      originalAlt: country.title,
+      original: country.countryImage,
+      originalAlt: country.name,
     };
     return card;
   });

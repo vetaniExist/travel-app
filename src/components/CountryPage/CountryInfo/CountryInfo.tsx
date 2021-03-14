@@ -1,15 +1,29 @@
 import React from "react";
 
-function CountryInfo() {
+type CountryInfoProps = {
+  name: string,
+  capital: string,
+  countryDescription: string,
+  countryFlagImage: string
+}
+
+function CountryInfo({name, capital, countryDescription, countryFlagImage}: CountryInfoProps) {
   return (
-    <div className='wrapper'>
-      <h3>CountryInfo</h3>
-      <img alt="countryFlag" />
-      <h4>Capital: capital</h4>
-      <h4>Description:</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac porta nisl. Donec ornare tortor.
-      </p>
+    <div className="wrapper">
+      <div className="countryDetails">
+      <div className="countryInfo">
+        <img src={countryFlagImage} alt="country-flag"/>
+        <h2 className="countryDetailsSubTitle">{name}</h2>
+      </div>
+      <div className='countryInfo'>
+        <h2 className="countryDetailsTitle">Capital:</h2>
+        <h2 className="countryDetailsSubTitle">{capital}</h2>
+      </div>
+      <div className='countryDescription'>
+        <h2 className="countryDetailsTitle">Description:</h2>
+        <p>{countryDescription}</p>
+      </div>
+      </div>
     </div>
   );
 }
