@@ -7,7 +7,7 @@ const Header = () => {
   const topHeaderPosition: CSSProperties = {
     width: "100%",
     position: "absolute",
-    backgroundColor: "none",
+    backgroundColor: "rgb(34 34 34 / 0%)",
   };
 
   const scrollHeaderPosition: CSSProperties = {
