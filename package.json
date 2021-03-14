@@ -10,7 +10,8 @@
     "start": "node ./dist/server.js",
     "lint": "eslint ./**/*.js ./**/*.ts ./**/*.tsx",
     "lintf": "eslint --fix ./**/*.js ./**/*.ts ./**/*.tsx",
-    "lintp": "eslint"
+    "lintp": "eslint",
+    "heroku-postbuild": "webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
