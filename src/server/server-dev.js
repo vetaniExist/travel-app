@@ -1,5 +1,6 @@
 import path from "path";
 import express from "express";
+import cors from 'cors';
 
 import webpack from "webpack";// eslint-disable-line
 import webpackDevMiddleware from "webpack-dev-middleware";// eslint-disable-line
@@ -23,6 +24,8 @@ server.use(webpackDevMiddleware(compiler, {
 }));
 
 server.use(webpackHotMiddleware(compiler));
+
+server.use(cors());
 
 server.use(express.static(DIST_DIR));
 
