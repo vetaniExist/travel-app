@@ -10,7 +10,8 @@
     "start": "node ./dist/server.js",
     "lint": "eslint ./**/*.js ./**/*.ts ./**/*.tsx",
     "lintf": "eslint --fix ./**/*.js ./**/*.ts ./**/*.tsx",
-    "lintp": "eslint"
+    "lintp": "eslint",
+    "heroku-postbuild": "webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/vetaniExist/travel-app#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
