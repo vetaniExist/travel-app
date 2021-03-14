@@ -10,12 +10,16 @@ interface CardsProps {
   countriesInfo: ICountry[];
 }
 
+function handleClick() {
+  console.log('click!');
+}
+
 const Cards = ({countriesInfo}: CardsProps) => {
 
   return (
     <>
       {countriesInfo.map((country: any, index: number) => (
-          <div className="card" key={index}>
+          <div className="card" key={index} onClick={handleClick}>
             <header className="card__header">
               <span>{country.capital}</span>
               <div className="card__header_favorites">
