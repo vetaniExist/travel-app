@@ -37,9 +37,39 @@ export default function Video() {
       (err: Error) => { console.error("Execute error", err); });
   }
 
+  useEffect(() => {
+    const getData = async () => {
+      function loadClient() {
+        gapi.client.setApiKey("AIzaSyAoldSYu2-e9-GINmaH0t7DaP0MI4sAGno");
+        return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+          .then(() => {
+            console.log("GAPI client loaded for API");
+            execute();
+          },
+          (err: Error) => { console.error("Error loading GAPI client for API", err); });
+      }
+
+      setIsLoading(true);
+      try {
+        gapi.load("client", loadClient);
+        // setVideos(response.data.name);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    getData();
+  }, []);
+
+  function onReady(event: any) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
+
   return (
     <>
-        
+        {isLoading ? "Loading" : <YouTube videoId={videos[1]} opts={videoOpts} onReady={onReady} />}
     </>
   );
 }
