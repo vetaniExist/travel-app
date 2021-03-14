@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import "../css/app.scss";
-import CountryPage from "./CountryPage";
+import CountryPage from "./CountryPage/CountryPage";
 import Header from './Header/Header';
 import Footer from "./Footer";
 import Countries from './Countries';
