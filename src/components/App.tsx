@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,26 +11,61 @@ import Footer from "./Footer/Footer";
 import MainPage from "./MainPage/MainPage";
 import { storeExample } from "../store.example";
 
-const App = (): JSX.Element => (
+function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    fetch("https://travel-app-v.herokuapp.com/api/country", {
+      mode: 'cors',
+    })
+      .then((data) => data.json())
+      .then((dataJson) => {
+        console.log(dataJson);
+        setData(dataJson);
+      });
+  }, []);
+  return (
     <>
-      <Header/>
+      <Header />
 
       <Router>
         <Switch>
-         {/* <Route path="/authorization">
+          {/* <Route path="/authorization">
             <Authorization />
           </Route>*/}
           <Route path="/country/:id">
-            <CountryPage countriesInfo={storeExample}/>
+            <CountryPage countriesInfo={storeExample} />
           </Route>
           <Route path="/">
-            <MainPage/>
+            <MainPage />
           </Route>
         </Switch>
       </Router>
 
-      <Footer/>
+      <Footer />
     </>
-);
+  )
+}
 
+/* const App = (): JSX.Element => (
+  <>
+    <Header />
+
+    <Router>
+      <Switch>
+        {<Route path="/authorization">
+          <Authorization />
+        </Route>}
+        <Route path="/country/:id">
+          <CountryPage countriesInfo={storeExample} />
+        </Route>
+        <Route path="/">
+          <MainPage />
+        </Route>
+      </Switch>
+    </Router>
+
+    <Footer />
+  </>
+);
+ */
 export default App;

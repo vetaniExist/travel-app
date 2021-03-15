@@ -27,10 +27,10 @@ export default function Video() {
     return gapi.client.youtube.search.list(arrSearch)
       .then((response: any) => {
         const listItem = response.result.items;
-        console.log(listItem);
+        // console.log(listItem);
         if (listItem) {
           const listVideo = listItem.map((item: any) => item.id.videoId);
-          console.log(listVideo);
+          // console.log(listVideo);
           setIsLoading(false);
           setVideos(listVideo);
         }
@@ -45,7 +45,7 @@ export default function Video() {
         gapi.client.setApiKey("AIzaSyAoldSYu2-e9-GINmaH0t7DaP0MI4sAGno");
         return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
           .then(() => {
-            console.log("GAPI client loaded for API");
+            // console.log("GAPI client loaded for API");
             execute();
           },
           (err: Error) => { console.error("Error loading GAPI client for API", err); });
