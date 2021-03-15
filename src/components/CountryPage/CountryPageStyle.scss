@@ -1,3 +1,12 @@
+@import '../../common/constants';
+
+
+.countryPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .countryDetailsSubTitle {
     color: $dark-font-color;
 }

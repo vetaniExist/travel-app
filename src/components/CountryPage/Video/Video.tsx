@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 // @ts-ignore
 import { gapi } from "gapi-script";
+import "./VideoStyles.scss";
 
 export default function Video() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -70,7 +71,10 @@ export default function Video() {
 
   return (
     <>
+      <div className="videoBlock">
         {isLoading ? "Loading" : <YouTube videoId={videos[1]} opts={videoOpts} onReady={onReady} />}
+      </div>
+
     </>
   );
 }

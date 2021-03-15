@@ -21,12 +21,14 @@ function CountryPage({ countriesInfo }: CardsProps) {
   return (
     <div className="countryPage">
       <Slider />
-      <CountryInfo country={country}/>
-
-      <Map />
-      <Widgets />
-      <Video />
+      <div className="wrapper">
+        <CountryInfo country={country}/>
+        <Map />
+        <Widgets />
+        <Video />
+      </div>
     </div>
+
   );
 }
 
