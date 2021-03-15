@@ -1,8 +1,14 @@
 import React from "react";
+import "./WeatherStyle.scss"
 
 function Weather() {
   return (
-    <div>Weather</div>
+    <div className="card__template weather">
+      <div className="">
+        Weather
+      </div>
+
+    </div>
   );
 }
 
