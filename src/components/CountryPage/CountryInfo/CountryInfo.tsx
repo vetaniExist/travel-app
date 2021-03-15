@@ -1,13 +1,14 @@
 import React from "react";
 
 type CountryInfoProps = {
+  id: number,
   name: string,
   capital: string,
   countryDescription: string,
   countryFlagImage: string
 }
 
-function CountryInfo({name, capital, countryDescription, countryFlagImage}: CountryInfoProps) {
+function CountryInfo({id, name, capital, countryDescription, countryFlagImage}: CountryInfoProps) {
   return (
     <div className="wrapper">
       <div className="countryDetails">

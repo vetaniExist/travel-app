@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 import "../css/app.scss";
 import CountryPage from "./CountryPage/CountryPage";
 import Header from "./Header/Header";
@@ -9,8 +14,18 @@ import { storeExample } from "../store.example";
 const App: React.FC = () => (
     <>
       <Header/>
-      <MainPage/>
-      <CountryPage countriesInfo={storeExample}/>
+
+      <Router>
+        <Switch>
+          <Route path="/country/">
+            <CountryPage countriesInfo={storeExample}/>
+          </Route>
+          <Route path="/">
+            <MainPage/>
+          </Route>
+        </Switch>
+      </Router>
+
       <Footer/>
     </>
 );

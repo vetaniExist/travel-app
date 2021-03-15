@@ -16,6 +16,7 @@ function CountryPage({countriesInfo}: CardsProps) {
     <div className="countryPage">
       <Slider />
       <CountryInfo
+        id={countriesInfo[1].id}
         name={countriesInfo[1].name}
         capital={countriesInfo[1].capital}
         countryDescription={countriesInfo[1].countryDescription}
