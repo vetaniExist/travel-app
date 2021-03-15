@@ -14,6 +14,9 @@ return ({
       publicPath: '/',
       filename: '[name].js'
     },
+    devServer: {
+      historyApiFallback: true,
+    },
     target: 'node',
     node: {
       // Need this when working with express, otherwise the build fails

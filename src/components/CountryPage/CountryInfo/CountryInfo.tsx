@@ -8,7 +8,9 @@ type CountryInfoProps = {
   countryFlagImage: string
 }
 
-function CountryInfo({id, name, capital, countryDescription, countryFlagImage}: CountryInfoProps) {
+function CountryInfo({
+  id, name, capital, countryDescription, countryFlagImage,
+}: CountryInfoProps) {
   return (
     <div className="wrapper">
       <div className="countryDetails">

@@ -1,6 +1,6 @@
 import path from "path";
 import express from "express";
-import cors from 'cors';
+import cors from "cors";
 
 import webpack from "webpack";// eslint-disable-line
 import webpackDevMiddleware from "webpack-dev-middleware";// eslint-disable-line
@@ -49,8 +49,8 @@ server.get("/api/country/:countryName", (req, res) => {
   res.json(countryData);
 });
 
-server.get("/*", (req, res) => {
+/* server.get("/!*", (req, res) => {
   res.redirect("/");
-});
+}); */
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));// eslint-disable-line

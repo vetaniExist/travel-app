@@ -1,6 +1,6 @@
 import path from "path";
 import express from "express";
-import cors from 'cors';
+import cors from "cors";
 
 import countriesList from "./data/countryList.json";
 import data from "./data/initFullData";
@@ -35,7 +35,6 @@ server.get("/api/country/:countryName", (req, res) => {
   const countryData = data[countryName] || {};
   res.json(countryData);
 });
-
 
 server.get("/*", (req, res) => {
   res.redirect("/");

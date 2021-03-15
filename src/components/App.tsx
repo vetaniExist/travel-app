@@ -2,7 +2,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Link
 } from "react-router-dom";
 import "../css/app.scss";
 import CountryPage from "./CountryPage/CountryPage";
@@ -17,10 +18,11 @@ const App: React.FC = () => (
 
       <Router>
         <Switch>
-          <Route path="/country/">
+          <Route path="/country">
             <CountryPage countriesInfo={storeExample}/>
           </Route>
           <Route path="/">
+            <Link to="/country">Country</Link>
             <MainPage/>
           </Route>
         </Switch>

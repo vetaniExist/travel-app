@@ -15,6 +15,9 @@ module.exports = {
   mode: 'development',
   target: 'web',
   devtool: 'source-map',
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [{
         test: /\.scss$/,

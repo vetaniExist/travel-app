@@ -11,7 +11,7 @@ interface CardsProps {
   countriesInfo: ICountry[];
 }
 
-function CountryPage({countriesInfo}: CardsProps) {
+function CountryPage({ countriesInfo }: CardsProps) {
   return (
     <div className="countryPage">
       <Slider />
