@@ -2,16 +2,16 @@ import React from "react";
 import Weather from "./Weather/Weather";
 import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
+import "./WidgetsStyle.scss"
 
 function Widgets() {
   return (
-    <>
-      <h3>Widgets</h3>
-      <Weather/>
+    <div className="widgets">
+      <Weather />
       <Date />
       <Currency/>
 
-    </>
+    </div>
 
   );
 }

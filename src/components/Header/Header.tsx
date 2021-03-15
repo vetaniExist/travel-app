@@ -19,14 +19,14 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log("preconditional", window.pageYOffset > 0);
+      // console.log("preconditional", window.pageYOffset > 0);
       if (window.pageYOffset > 0) {
         setHeaderStyle(scrollHeaderPosition);
       } else if (window.pageYOffset === 0) {
         setHeaderStyle(topHeaderPosition);
       }
 
-      console.log(window.pageYOffset, headerStyle);
+      // console.log(window.pageYOffset, headerStyle);
     });
   }, []);
 

@@ -1,6 +1,6 @@
 import path from "path";
 import express from "express";
-import cors from 'cors';
+import cors from "cors";
 
 import webpack from "webpack";// eslint-disable-line
 import webpackDevMiddleware from "webpack-dev-middleware";// eslint-disable-line
@@ -29,10 +29,6 @@ server.use(cors());
 
 server.use(express.static(DIST_DIR));
 
-server.get("/", (req, res) => {
-  res.sendFile(HTML_FILE);
-});
-
 server.get("/api/countriesList", (req, res) => {
   res.json(countriesList);
 });
@@ -50,7 +46,7 @@ server.get("/api/country/:countryName", (req, res) => {
 });
 
 server.get("/*", (req, res) => {
-  res.redirect("/");
+  res.sendFile(HTML_FILE);
 });
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));// eslint-disable-line

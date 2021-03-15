@@ -1,11 +1,12 @@
 import React from "react";
+import "./MapStyles.scss";
 
 function Map() {
   return (
-    <>
-      <h3>Location</h3>
+    <div className="map">
+      <h2 className="countryDetailsTitle">Location</h2>
       <div>Map</div>
-    </>
+    </div>
   );
 }
 

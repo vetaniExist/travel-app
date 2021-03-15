@@ -1,30 +1,30 @@
 import React from "react";
+import { ICountry } from "../../../store.example";
 
-type CountryInfoProps = {
-  name: string,
-  capital: string,
-  countryDescription: string,
-  countryFlagImage: string
+interface CountryInfoProps {
+  country: ICountry;
 }
 
-function CountryInfo({name, capital, countryDescription, countryFlagImage}: CountryInfoProps) {
+function CountryInfo({country}: CountryInfoProps) {
+  const { name, capital, countryDescription, countryFlagImage } = country;
+
   return (
-    <div className="wrapper">
+    <>
       <div className="countryDetails">
-      <div className="countryInfo">
-        <img src={countryFlagImage} alt="country-flag"/>
-        <h2 className="countryDetailsSubTitle">{name}</h2>
+        <div className="countryInfo">
+          <img src={countryFlagImage} alt="country-flag"/>
+          <h2 className="countryDetailsSubTitle">{name}</h2>
+        </div>
+        <div className='countryInfo'>
+          <h2 className="countryDetailsTitle">Capital:</h2>
+          <h2 className="countryDetailsSubTitle">{capital}</h2>
+        </div>
+        <div className='countryDescription'>
+          <h2 className="countryDetailsTitle">Description:</h2>
+          <p>{countryDescription}</p>
+        </div>
       </div>
-      <div className='countryInfo'>
-        <h2 className="countryDetailsTitle">Capital:</h2>
-        <h2 className="countryDetailsSubTitle">{capital}</h2>
-      </div>
-      <div className='countryDescription'>
-        <h2 className="countryDetailsTitle">Description:</h2>
-        <p>{countryDescription}</p>
-      </div>
-      </div>
-    </div>
+    </>
   );
 }
 

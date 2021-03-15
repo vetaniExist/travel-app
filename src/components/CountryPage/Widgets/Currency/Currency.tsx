@@ -1,8 +1,9 @@
 import React from "react";
+import "./CurrencyStyle.scss";
 
 function Currency() {
   return (
-    <div>Currency</div>
+    <div className="card__template currency">Currency</div>
   );
 }
 

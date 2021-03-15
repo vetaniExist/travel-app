@@ -1,8 +1,8 @@
 import React from "react";
 
-import logoGithub from "../assets/github.svg";
-import logoRSS from "../assets/rsschool.svg";
-import "../css/app.scss";
+import logoGithub from "../../assets/github.svg";
+import logoRSS from "../../assets/rsschool.svg";
+import "./FooterStyle.scss";
 
 function Footer() {
   return (

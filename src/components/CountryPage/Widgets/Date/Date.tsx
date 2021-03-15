@@ -1,8 +1,9 @@
 import React from "react";
+import "./DateStyle.scss";
 
 function Date() {
   return (
-    <div>Date</div>
+    <div className="card__template date">Date</div>
   );
 }
 

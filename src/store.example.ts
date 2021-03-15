@@ -1,4 +1,5 @@
 export interface ICountry {
+  id: string,
   name: string;
   capital: string;
   countryImage: string;
@@ -23,6 +24,7 @@ export interface ICountry {
 
 export const storeExample: ICountry[] = [
   {
+    id: "1",
     name: "Italy",
     capital: "Rome",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -33,9 +35,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "2",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -46,9 +49,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/829/200/150/"
+    countryFlagImage: "https://picsum.photos/id/829/200/150/",
   },
   {
+    id: "3",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -59,9 +63,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "4",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -72,9 +77,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "5",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -85,9 +91,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "6",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -98,9 +105,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "7",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -111,9 +119,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "8",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -124,9 +133,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "9",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -137,9 +147,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "10",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -150,9 +161,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "11",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -163,9 +175,10 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
   {
+    id: "12",
     name: "France",
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
@@ -176,6 +189,6 @@ export const storeExample: ICountry[] = [
     + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    countryFlagImage: "https://picsum.photos/id/384/200/150/"
+    countryFlagImage: "https://picsum.photos/id/384/200/150/",
   },
 ];
