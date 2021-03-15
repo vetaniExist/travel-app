@@ -29,10 +29,6 @@ server.use(cors());
 
 server.use(express.static(DIST_DIR));
 
-server.get("/", (req, res) => {
-  res.sendFile(HTML_FILE);
-});
-
 server.get("/api/countriesList", (req, res) => {
   res.json(countriesList);
 });
@@ -49,8 +45,8 @@ server.get("/api/country/:countryName", (req, res) => {
   res.json(countryData);
 });
 
-/* server.get("/!*", (req, res) => {
-  res.redirect("/");
-}); */
+server.get("/*", (req, res) => {
+  res.sendFile(HTML_FILE);
+});
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));// eslint-disable-line
