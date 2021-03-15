@@ -8,6 +8,8 @@
 @import '../components/Header/components/Search/SearchStyles.scss';
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
 @import "../components/Slider/SliderStyles.scss";
+@import "../components/CountryPage/CountryPageStyle.scss";
+@import "../components/CountryPage/CountryInfo/CountryInfoStyle.scss";
 
 .countries {
     display: flex;

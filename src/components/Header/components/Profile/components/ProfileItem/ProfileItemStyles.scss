@@ -4,12 +4,10 @@
     border-radius: 30px;
     border: 1px solid $light-font-color;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     column-gap: 1em;
 }
 
@@ -30,16 +28,12 @@
 }
 
 .menu {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     position: relative;
-}
-
-.menu svg {
-    width: 25px;
-    height: 25px;
 }
 
 .menu svg:hover line { 
@@ -50,4 +44,14 @@
     max-width: 250px;
     position: absolute;
     top: 2.5em;
+}
+
+.menuIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url('/src/assets/icons/profile_settings.svg');
+    background-repeat: no-repeat;
+}
+.menuIcon:hover {
+    background-image: url('/src/assets/icons/profile-settings_hover.svg');
 }

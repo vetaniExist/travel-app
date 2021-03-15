@@ -1,22 +1,19 @@
-import React from 'react';
-import '../css/app.scss';
-import { ICountry } from '../store.example';
+import React from "react";
+import "../css/app.scss";
+import { ICountry } from "../store.example";
 // import heartRed from '../assets/heartred.svg';
-import heartWhite from '../assets/heartwhite.svg'
-import place from '../assets/place.svg'
-
+import heartWhite from "../assets/heartwhite.svg";
+import place from "../assets/place.svg";
 
 interface CardsProps {
   countriesInfo: ICountry[];
 }
 
 function handleClick() {
-  console.log('click!');
+  console.log("click!");
 }
 
-const Cards = ({countriesInfo}: CardsProps) => {
-
-  return (
+const Cards = ({ countriesInfo }: CardsProps) => (
     <>
       {countriesInfo.map((country: any, index: number) => (
           <div className="card" key={index} onClick={handleClick}>
@@ -32,10 +29,9 @@ const Cards = ({countriesInfo}: CardsProps) => {
               <span>{country.name}</span>
             </footer>
           </div>
-        ))
+      ))
       }
     </>
-  )
-};
+);
 
-export default Cards
+export default Cards;
