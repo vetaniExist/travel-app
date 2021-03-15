@@ -1,6 +1,6 @@
 import React from "react";
 import "./CountriesStyle.scss";
-import Cards from "../Cards/Cards";
+import Cards from "./Cards/Cards";
 import { storeExample } from "../../../store.example";
 
 function Countries() {

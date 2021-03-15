@@ -15,7 +15,12 @@ function CountryPage({countriesInfo}: CardsProps) {
   return (
     <div className="countryPage">
       <Slider />
-      <CountryInfo name={countriesInfo[1].name} capital={countriesInfo[1].capital} countryDescription={countriesInfo[1].countryDescription} countryFlagImage={countriesInfo[1].countryFlagImage}/>
+      <CountryInfo
+        name={countriesInfo[1].name}
+        capital={countriesInfo[1].capital}
+        countryDescription={countriesInfo[1].countryDescription}
+        countryFlagImage={countriesInfo[1].countryFlagImage}
+      />
       <Map />
       <Widgets />
       <Video />
