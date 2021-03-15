@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CardsStyle.scss";
-import { ICountry } from "../../../store.example";
+import { ICountry } from "../../../../store.example";
 // import heartRed from '../assets/heartred.svg';
 import heartWhite from "../../../../assets/heartwhite.svg";
 import place from "../../../../assets/place.svg";
@@ -9,14 +10,12 @@ interface CardsProps {
   countriesInfo: ICountry[];
 }
 
-function handleClick() {
-  console.log("click!");
-}
-
 const Cards = ({ countriesInfo }: CardsProps) => (
     <>
-      {countriesInfo.map((country: any, index: number) => (
-          <div className="card" key={index} onClick={handleClick}>
+      {countriesInfo.map((country: any) => (
+
+        <Link to={`/country/${country.id}`} key={country.id}>
+          <div className="card">
             <header className="card__header">
               <span>{country.capital}</span>
               <div className="card__header_favorites">
@@ -29,6 +28,8 @@ const Cards = ({ countriesInfo }: CardsProps) => (
               <span>{country.name}</span>
             </footer>
           </div>
+        </Link>
+
       ))
       }
     </>

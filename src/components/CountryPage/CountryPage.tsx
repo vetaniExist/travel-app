@@ -1,27 +1,28 @@
 import React from "react";
-// import {storeExample} from "../store.example";
-import Video from "./Video/Video";
+import { useParams } from "react-router-dom";
+import Slider from "../Slider/Slider";
+import CountryInfo from "./CountryInfo/CountryInfo";
 import Map from "./Map/Map";
 import Widgets from "./Widgets/Widgets";
-import CountryInfo from "./CountryInfo/CountryInfo";
-import Slider from "../Slider/Slider";
+import Video from "./Video/Video";
 import { ICountry } from "../../store.example";
 
 interface CardsProps {
   countriesInfo: ICountry[];
 }
+interface ParamTypes {
+  id: string;
+}
 
 function CountryPage({ countriesInfo }: CardsProps) {
+  const { id } = useParams<ParamTypes>();
+  const country: ICountry = countriesInfo.filter(item => item.id === id)[0];
+
   return (
     <div className="countryPage">
       <Slider />
-      <CountryInfo
-        id={countriesInfo[1].id}
-        name={countriesInfo[1].name}
-        capital={countriesInfo[1].capital}
-        countryDescription={countriesInfo[1].countryDescription}
-        countryFlagImage={countriesInfo[1].countryFlagImage}
-      />
+      <CountryInfo country={country}/>
+
       <Map />
       <Widgets />
       <Video />

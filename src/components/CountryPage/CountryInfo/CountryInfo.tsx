@@ -1,16 +1,13 @@
 import React from "react";
+import { ICountry } from "../../../store.example";
 
-type CountryInfoProps = {
-  id: number,
-  name: string,
-  capital: string,
-  countryDescription: string,
-  countryFlagImage: string
+interface CountryInfoProps {
+  country: ICountry;
 }
 
-function CountryInfo({
-  id, name, capital, countryDescription, countryFlagImage,
-}: CountryInfoProps) {
+function CountryInfo({country}: CountryInfoProps) {
+  const { name, capital, countryDescription, countryFlagImage } = country;
+
   return (
     <div className="wrapper">
       <div className="countryDetails">
