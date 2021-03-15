@@ -1,5 +1,5 @@
 import React from "react";
-import Countries from "../Countries";
+import Countries from "./Countries/Countries";
 import Slider from "../Slider/Slider";
 
 const MainPage = () => (

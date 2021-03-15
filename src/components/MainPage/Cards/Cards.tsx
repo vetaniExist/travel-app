@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/app.scss";
-import { ICountry } from "../store.example";
+import "./CardsStyle.scss";
+import { ICountry } from "../../store.example";
 // import heartRed from '../assets/heartred.svg';
-import heartWhite from "../assets/heartwhite.svg";
-import place from "../assets/place.svg";
+import heartWhite from "../../../assets/heartwhite.svg";
+import place from "../../../assets/place.svg";
 
 interface CardsProps {
   countriesInfo: ICountry[];

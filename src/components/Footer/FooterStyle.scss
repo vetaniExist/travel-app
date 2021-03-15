@@ -1,0 +1,27 @@
+@import '../../common/constants.scss';
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 2px;
+  background-color: $main-color;
+  font-size: 12px;
+  font-weight: bold;
+  color:$light-font-color;
+
+  &__icons_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 32px;
+    margin-left: 5px;
+  }
+  &__icon_git {
+    width: 16px;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import "../css/app.scss";
-import Cards from "./Cards";
-import { storeExample } from "../store.example";
+import "./CountriesStyle.scss";
+import Cards from "../Cards/Cards";
+import { storeExample } from "../../../store.example";
 
 function Countries() {
   return (

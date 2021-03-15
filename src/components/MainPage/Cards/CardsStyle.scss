@@ -1,0 +1,47 @@
+@import '../../../common/constants';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 370px;
+  height: 370px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #1b295e;
+  border: 0 solid;
+  outline: 0 solid;
+  border-radius: 20px;
+  font-size: 24px;
+  color: $light-font-color;
+  box-shadow: 5px 5px 10px 0 rgba(34, 60, 80, 0.2);
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
+  &:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(76, 80, 82, 0.63);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
+  &:active {
+    transform: translateY(4px);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    &_favorites {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__icon {
+    width: 32px;
+    margin-left: 10px;
+    &.place {
+      margin: 0 10px 0 0;
+    }
+  }
+}
