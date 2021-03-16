@@ -11,8 +11,15 @@ import Footer from "./Footer/Footer";
 import MainPage from "./MainPage/MainPage";
 import { storeExample } from "../store.example";
 
+const getDefaultLanguage = () => {
+  const lang = localStorage.getItem("language") ? localStorage.getItem("language") : "English";
+  return lang;
+};
+
 function App() {
   const [data, setData] = useState([]);
+  const [language, setLanguage] = useState(getDefaultLanguage());
+
   useEffect(() => {
     fetch("https://travel-app-v.herokuapp.com/api/country", {
       mode: 'cors',
@@ -25,7 +32,10 @@ function App() {
   }, []);
   return (
     <>
-      <Header />
+      <Header
+        language={language}
+        setLanguage={setLanguage}
+      />
 
       <Router>
         <Switch>
@@ -33,7 +43,10 @@ function App() {
             <Authorization />
           </Route>*/}
           <Route path="/country/:id">
-            <CountryPage countriesInfo={storeExample} />
+            <CountryPage
+              countriesInfo={storeExample}
+              language={language}
+            />
           </Route>
           <Route path="/">
             <MainPage />

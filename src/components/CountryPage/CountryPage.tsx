@@ -9,21 +9,21 @@ import { ICountry } from "../../store.example";
 
 interface CardsProps {
   countriesInfo: ICountry[];
+  language: string;
 }
 interface ParamTypes {
   id: string;
 }
 
-function CountryPage({ countriesInfo }: CardsProps) {
+function CountryPage({ countriesInfo, language }: CardsProps) {
   const { id } = useParams<ParamTypes>();
   const country: ICountry = countriesInfo.filter(item => item.id === id)[0];
-
   return (
     <div className="countryPage">
       <Slider />
       <div className="wrapper">
-        <CountryInfo country={country}/>
-        <Map />
+        <CountryInfo country={country} />
+        <Map language={language} />
         <Widgets />
         <Video />
       </div>
