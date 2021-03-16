@@ -35,28 +35,26 @@ function App() {
   return (
     <>
       <Context.Provider value={[data, setData, seachData]}>
-        <Header />
-
         <Router>
-          <Switch>
-            {/* <Route path="/authorization">
-            <Authorization />
-          </Route>*/}
-          <Route path="/country/:name">
-            <CountryPage
-              countriesInfo={data}
-              language={language}
-            />
-          </Route>
-          <Route path="/">
-            <MainPage
-              countriesInfo={data}
-            />
-          </Route>
-        </Switch>
-      </Router>
-
-        <Footer />
+          <Header />
+            <Switch>
+              {/* <Route path="/authorization">
+              <Authorization />
+            </Route>*/}
+            <Route path="/country/:name">
+              <CountryPage
+                countriesInfo={data}
+                language={language}
+              />
+            </Route>
+            <Route path="/">
+              <MainPage
+                countriesInfo={data}
+              />
+            </Route>
+            </Switch>
+          <Footer />
+        </Router>
       </Context.Provider>
     </>
   );
