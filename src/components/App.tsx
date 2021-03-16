@@ -17,16 +17,15 @@ const getDefaultLanguage = () => {
 };
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(storeExample);
   const [language, setLanguage] = useState(getDefaultLanguage());
 
   useEffect(() => {
-    fetch("https://travel-app-v.herokuapp.com/api/country", {
+    fetch("https://travel-app-v.herokuapp.com/api/countriesList", {
       mode: 'cors',
     })
       .then((data) => data.json())
       .then((dataJson) => {
-        console.log(dataJson);
         setData(dataJson);
       });
   }, []);
@@ -42,14 +41,16 @@ function App() {
           {/* <Route path="/authorization">
             <Authorization />
           </Route>*/}
-          <Route path="/country/:id">
+          <Route path="/country/:name">
             <CountryPage
-              countriesInfo={storeExample}
+              countriesInfo={data}
               language={language}
             />
           </Route>
           <Route path="/">
-            <MainPage />
+            <MainPage
+              countriesInfo={data}
+            />
           </Route>
         </Switch>
       </Router>

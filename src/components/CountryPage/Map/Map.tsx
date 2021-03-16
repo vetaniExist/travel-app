@@ -1,5 +1,5 @@
 import React from "react";
-import { YMaps, Map as YMap } from 'react-yandex-maps';
+import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import "./MapStyles.scss";
 
 /* lang=ru_RU;
@@ -10,7 +10,6 @@ lang=uk_UA;
 lang=tr_TR. */
 
 function getAPILanguage(sysLang) {
-  // console.log(sysLang)
   switch (sysLang) {
     case "EN":
     case "Английский":
@@ -28,21 +27,28 @@ function getAPILanguage(sysLang) {
   }
 }
 
+/* "lat": 10.66668,
+  "lon": -61.51889 */
+
 function Map(props) {
+  const lat = props.coord[0];
+  const lon = props.coord[1];
   return (
     <YMaps
-      key={props.language}
+      key={props.language + props.coord}
       query={{
         lang: getAPILanguage(props.language)
       }}>
       <div>
         My awesome application with maps!
       <YMap
-          defaultState={{ center: [55.75, 37.57], zoom: 5 }}
+          defaultState={{ center: [lat, lon], zoom: 9 }}
           width={"100%"}
           height={"600px"}
-          onLoad={ymaps => console.log(ymaps)}
-        />
+          // onLoad={ymaps => console.log(ymaps)}
+        >
+          <Placemark geometry={[lat, lon]} />
+        </YMap>
       </div>
     </YMaps>
   )

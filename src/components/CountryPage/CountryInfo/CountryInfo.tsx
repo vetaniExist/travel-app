@@ -5,14 +5,13 @@ interface CountryInfoProps {
   country: ICountry;
 }
 
-function CountryInfo({country}: CountryInfoProps) {
+function CountryInfo({ country }: CountryInfoProps) {
   const { name, capital, countryDescription, countryFlagImage } = country;
-
   return (
     <>
       <div className="countryDetails">
         <div className="countryInfo">
-          <img src={countryFlagImage} alt="country-flag"/>
+          <img src={countryFlagImage} alt="country-flag" />
           <h2 className="countryDetailsSubTitle">{name}</h2>
         </div>
         <div className='countryInfo'>

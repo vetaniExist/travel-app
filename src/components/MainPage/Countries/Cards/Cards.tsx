@@ -14,7 +14,7 @@ const Cards = ({ countriesInfo }: CardsProps) => (
     <>
       {countriesInfo.map((country: any) => (
 
-        <Link to={`/country/${country.id}`} key={country.id} className="card__link">
+        <Link to={`/country/${country.name}`} key={country.name+country.id} className="card__link">
           <div className="card card__template">
             <header className="card__header">
               <span>{country.capital}</span>
