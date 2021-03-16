@@ -23,7 +23,7 @@ const Slider = ({country, isMainPage}: SliderInfo) => {
       listOfImages = country.sights.map((sight:any) => {
         return {
           original: sight.image,
-          thumbnail: sight.preview.source,
+          thumbnail: sight.preview.source ? sight.preview.source : sight.image,
           thumbnailTitle: sight.name,
           originalAlt: sight.name,
           description: `${sight.name} - ${sight.description[0][lang]}`
