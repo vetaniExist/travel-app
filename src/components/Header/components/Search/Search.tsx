@@ -6,8 +6,7 @@ import { storeExample, ICountry } from "../../../../store.example";
 import Context from "../../../Context";
 
 const Search = () => {
-  const [data, setContext, seachData] = useContext(Context);
-  console.log(seachData);
+  const [, setContext, seachData] = useContext(Context);
   const inputEl = useRef<HTMLInputElement | null>(null);
   const buttonEl = useRef<HTMLButtonElement | null>(null);
   const [seach, setSeach] = useState<string>("");
