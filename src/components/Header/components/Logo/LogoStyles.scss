@@ -1,7 +1,10 @@
-/* @import '../../../../common/constants.scss'; */
+@import '../../../../common/constants.scss';
 
 .logo {
-    color: $main-color;
-    font-weight: bold;
-    font-size: 28px;
+    & a {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 28px;
+        text-decoration: none;
+    }
 }
