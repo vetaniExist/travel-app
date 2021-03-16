@@ -15,11 +15,11 @@ const Slider = ({country, isMainPage}: SliderInfo) => {
       return {
         original: country.countryImage,
         originalAlt: country.name,
+        description: country.name
       }
     });
   } else {
     listOfImages = country.sights.map((sight:any) => {
-      console.log(sight.description[0])
       return {
         original: sight.image,
         thumbnail: sight.preview.source,

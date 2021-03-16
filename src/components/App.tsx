@@ -40,21 +40,21 @@ function App() {
         <Router>
           <Switch>
             {/* <Route path="/authorization">
-            <Authorization />
-          </Route>*/}
-          <Route path="/country/:name">
-            <CountryPage
-              countriesInfo={data}
-              language={language}
-            />
-          </Route>
-          <Route path="/">
-            <MainPage
-              countriesInfo={data}
-            />
-          </Route>
-        </Switch>
-      </Router>
+              <Authorization />
+            </Route>*/}
+            <Route path="/country/:name">
+              <CountryPage
+                countriesInfo={data}
+                language={language}
+              />
+            </Route>
+            <Route path="/">
+              <MainPage
+                countriesInfo={data}
+              />
+            </Route>
+          </Switch>
+        </Router>
 
         <Footer />
       </Context.Provider>
