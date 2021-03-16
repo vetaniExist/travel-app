@@ -8,6 +8,7 @@ import Context from "../../../Context";
 const Search = () => {
   const [, setContext] = useContext(Context);
   const inputEl = useRef<HTMLInputElement | null>(null);
+  const buttonEl = useRef<HTMLButtonElement | null>(null);
   const [seach, setSeach] = useState<string>("");
   const [founded, setFounded] = useState<ICountry | undefined>();
 
@@ -66,6 +67,10 @@ const Search = () => {
         value={seach}
         onChange={updateSeach}
       />
+      <button id="elem" ref = {buttonEl} className='inputCleanIcon' onClick={(e) => {
+        inputEl.current?.value = "";
+        updateSeach(e);
+      }}>x</button>
       <button className='inputSearchIcon' onClick={() => inputEl.current?.focus()}>
         <img className='imgSearchIcon' src={magnifierIcon} />
       </button>
