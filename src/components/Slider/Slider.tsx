@@ -19,15 +19,18 @@ const Slider = ({country, isMainPage}: SliderInfo) => {
       }
     });
   } else {
-    listOfImages = country.sights.map((sight:any) => {
-      return {
-        original: sight.image,
-        thumbnail: sight.preview.source,
-        thumbnailTitle: sight.name,
-        originalAlt: sight.name,
-        description: `${sight.name} - ${sight.description[0][lang]}`
-      }
-    });
+    if (country.sights) {
+      listOfImages = country.sights.map((sight:any) => {
+        return {
+          original: sight.image,
+          thumbnail: sight.preview.source,
+          thumbnailTitle: sight.name,
+          originalAlt: sight.name,
+          description: `${sight.name} - ${sight.description[0][lang]}`
+        }
+      });
+    }
+    
   }
 
   return (
