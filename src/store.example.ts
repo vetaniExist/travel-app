@@ -5,17 +5,17 @@ export interface ICountry {
   countryImage: string;
   countryDescription: string;
   countryFlagImage: string;
-  // sights: ISights[];
+  sights: ISights[];
   // video: IVideo[];
   // map: any;
 }
 
-// interface ISights {
-//   id: string;
-//   images: any;
-//   title: string;
-//   description: string;
-// }
+interface ISights {
+  id: string;
+  images: any;
+  title: string;
+  description: string;
+}
 
 // interface IVideo {
 //   id: string;
@@ -36,6 +36,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "2",
@@ -50,6 +51,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/829/200/150/",
+    sights: []
   },
   {
     id: "3",
@@ -64,6 +66,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "4",
@@ -78,6 +81,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "5",
@@ -92,6 +96,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "6",
@@ -106,6 +111,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "7",
@@ -120,6 +126,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "8",
@@ -134,6 +141,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "9",
@@ -148,6 +156,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "10",
@@ -162,6 +171,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "11",
@@ -176,6 +186,7 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
   {
     id: "12",
@@ -190,5 +201,6 @@ export const storeExample: ICountry[] = [
     + "occaecat cupidatat non proident, "
     + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
+    sights: []
   },
 ];
