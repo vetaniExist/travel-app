@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, #app {
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@ body, #app {
     justify-content: space-between;
     width: 370px;
     height: 370px;
-
+    margin: 20px 0;
     padding: 30px;
     border: 0 solid;
     outline: 0 solid;
