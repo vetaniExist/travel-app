@@ -14,7 +14,7 @@ input::placeholder{
   }
 
 .inputSearch {
-    width: 100px;
+    width: 95px;
     border: none;
     outline: none;
     background: none;
@@ -33,6 +33,7 @@ input::placeholder{
     cursor: pointer;
     outline: none;
     margin-right: 10px;
+    margin-left: 5px;
 }
 
 .inputSearchIcon:hover {
@@ -42,4 +43,16 @@ input::placeholder{
 .imgSearchIcon {
     width: 20px;
     height: 20px;
+}
+
+.inputCleanIcon {
+    font-size: 19px;
+    margin: 0;
+    padding: 0;
+    line-height: 0.75;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: white;
+    border: none;
 }

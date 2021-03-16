@@ -10,12 +10,14 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import MainPage from "./MainPage/MainPage";
 import { storeExample } from "../store.example";
+import Context from "./Context";
 
 function App() {
+  const [countryData, setCountryData] = useState(storeExample);
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch("https://travel-app-v.herokuapp.com/api/country", {
-      mode: 'cors',
+      mode: "cors",
     })
       .then((data) => data.json())
       .then((dataJson) => {
@@ -25,25 +27,27 @@ function App() {
   }, []);
   return (
     <>
-      <Header />
+      <Context.Provider value={[countryData, setCountryData]}>
+        <Header />
 
-      <Router>
-        <Switch>
-          {/* <Route path="/authorization">
+        <Router>
+          <Switch>
+            {/* <Route path="/authorization">
             <Authorization />
-          </Route>*/}
-          <Route path="/country/:id">
-            <CountryPage countriesInfo={storeExample} />
-          </Route>
-          <Route path="/">
-            <MainPage />
-          </Route>
-        </Switch>
-      </Router>
+          </Route> */}
+            <Route path="/country/:id">
+              <CountryPage countriesInfo={storeExample} />
+            </Route>
+            <Route path="/">
+              <MainPage />
+            </Route>
+          </Switch>
+        </Router>
 
-      <Footer />
+        <Footer />
+      </Context.Provider>
     </>
-  )
+  );
 }
 
 /* const App = (): JSX.Element => (
