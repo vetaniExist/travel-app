@@ -18,6 +18,7 @@ const getDefaultLanguage = () => {
 };
 
 function App() {
+  const [seachData, setSeachData] = useState(storeExample);
   const [data, setData] = useState(storeExample);
   const [language, setLanguage] = useState(getDefaultLanguage());
 
@@ -28,11 +29,12 @@ function App() {
       .then((data) => data.json())
       .then((dataJson) => {
         setData(dataJson);
+        setSeachData(dataJson);
       });
   }, []);
   return (
     <>
-      <Context.Provider value={[data, setData]}>
+      <Context.Provider value={[data, setData, seachData]}>
         <Header />
 
         <Router>

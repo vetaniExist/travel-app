@@ -6,7 +6,8 @@ import { storeExample, ICountry } from "../../../../store.example";
 import Context from "../../../Context";
 
 const Search = () => {
-  const [, setContext] = useContext(Context);
+  const [data, setContext, seachData] = useContext(Context);
+  console.log(seachData);
   const inputEl = useRef<HTMLInputElement | null>(null);
   const buttonEl = useRef<HTMLButtonElement | null>(null);
   const [seach, setSeach] = useState<string>("");
@@ -19,7 +20,7 @@ const Search = () => {
     setSeach(e.target.value);
 
     if (e.target.value !== undefined) {
-      const newCountry = storeExample.filter((item) => {
+      const newCountry = seachData.filter((item) => {
         // @ts-ignore
         const arrCountry = item.name.toLocaleLowerCase().includes(inputEl.current?.value.toLocaleLowerCase());
         // @ts-ignore
