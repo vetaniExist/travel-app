@@ -10,6 +10,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import MainPage from "./MainPage/MainPage";
 import { storeExample } from "../store.example";
+import Context from "./Context";
 
 const getDefaultLanguage = () => {
   const lang = localStorage.getItem("language") ? localStorage.getItem("language") : "English";
@@ -31,14 +32,12 @@ function App() {
   }, []);
   return (
     <>
-      <Header
-        language={language}
-        setLanguage={setLanguage}
-      />
+      <Context.Provider value={[data, setData]}>
+        <Header />
 
-      <Router>
-        <Switch>
-          {/* <Route path="/authorization">
+        <Router>
+          <Switch>
+            {/* <Route path="/authorization">
             <Authorization />
           </Route>*/}
           <Route path="/country/:name">
@@ -55,9 +54,10 @@ function App() {
         </Switch>
       </Router>
 
-      <Footer />
+        <Footer />
+      </Context.Provider>
     </>
-  )
+  );
 }
 
 /* const App = (): JSX.Element => (
