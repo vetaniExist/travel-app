@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const LANGUAGES = {
   EN: {
@@ -18,24 +18,21 @@ const LANGUAGES = {
   },
 };
 
-const LanguageSelect = () => {
-  const defaultLanguage = localStorage.language ? localStorage.language : "English";
-  const [language, setLanguage] = useState(defaultLanguage);
-
+const LanguageSelect = (props) => {
   const handleChange = (value: { target: { value: any; }; }) => {
-    setLanguage(value.target.value);
+    props.setLanguage(value.target.value);
     localStorage.language = value.target.value;
   };
 
   return (
     <div className="dropdownContainer">
       <select
-        value={language}
+        value={props.language}
         onChange={handleChange}
         className='languageContainer'
       >
         {
-            Object.values(LANGUAGES.EN).map((lang, idx) => <option key={idx} value={lang}>{lang}</option>)
+          Object.values(LANGUAGES.EN).map((lang, idx) => <option key={idx} value={lang}>{lang}</option>)
         }
       </select>
     </div>

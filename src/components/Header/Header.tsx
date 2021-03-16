@@ -3,7 +3,7 @@ import Logo from "./components/Logo/Logo";
 import Search from "./components/Search/Search";
 import Profile from "./components/Profile/Profile";
 
-const Header = () => {
+const Header = (props) => {
   const topHeaderPosition: CSSProperties = {
     width: "100%",
     position: "absolute",
@@ -37,7 +37,10 @@ const Header = () => {
           <Logo />
           {/* remove search for country page */}
           <Search />
-          <Profile />
+          <Profile
+            language={props.language}
+            setLanguage={props.setLanguage}
+          />
         </div>
       </div>
     </header>
