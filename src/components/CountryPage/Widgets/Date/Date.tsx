@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./DateStyle.scss";
 
 function DateTimeWidget({capital, countryCode, timezone}) {
-  
+
   const [dateNow, setDateNow] = useState("");
   const countryTimeZone = timezone ? timezone : "UTC+01:00";
 
@@ -18,10 +18,10 @@ function DateTimeWidget({capital, countryCode, timezone}) {
   useEffect(()=> {
       const zones = countryTimeZone.toString().split("UTC")[1].split(":");
       const hoursZone = zones[0];
-      const minutesZone = zones[1]
+      const minutesZone = zones[1];
 
       let timer = setTimeout(()=>{
-        setDateNow(calcTime(`${hoursZone}.${minutesZone}`))
+        setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
       }, 1000);
 
     return () => clearInterval(timer);
