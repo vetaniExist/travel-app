@@ -1,5 +1,11 @@
 import React, { useRef } from "react";
-import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
+import {
+  YMaps,
+  Map as YMap,
+  Placemark,
+  FullscreenControl,
+  ZoomControl,
+} from 'react-yandex-maps';
 import "./MapStyles.scss";
 
 /* lang=ru_RU;
@@ -41,7 +47,9 @@ function Map(props) {
       const objectManager = new ymaps.ObjectManager();
       ymaps.borders.load('001').then(function (result) {
         const regions = result.features.reduce(function (acc, feature) {
-
+          feature.events.add('click', function () {
+            alert('Oh, an event!!');
+          })
           const iso = feature.properties.iso3166;
           feature.id = iso;
           feature.options = {
@@ -79,19 +87,27 @@ function Map(props) {
         lang: getAPILanguage(props.language)
       }}>
       <div>
-        My awesome application with maps!
-      <YMap
+        <YMap
           instanceRef={mapRef}
-          defaultState={{ center: [lat, lon], zoom: 3 }}
+          defaultState={{
+            center: [lat, lon],
+            zoom: 3,
+          }}
           width={"100%"}
           height={"600px"}
           onLoad={ymaps => getRegions(ymaps)}
+          options={{
+            minZoom: 2,
+            maxZoom: 10,
+          }}
           modules={["borders", "ObjectManager"]}
         >
           <Placemark geometry={[lat, lon]} />
+          <FullscreenControl />
+          <ZoomControl options={{ float: 'right' }} />
         </YMap>
       </div>
-    </YMaps>
+    </YMaps >
   )
 }
 
