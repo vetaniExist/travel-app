@@ -5,12 +5,13 @@ import {
   Switch,
 } from "react-router-dom";
 import "../css/app.scss";
-import CountryPage from "./CountryPage/CountryPage";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
-import MainPage from "./MainPage/MainPage";
 import { storeExample } from "../store.example";
 import Context from "./Context";
+
+const CountryPage = React.lazy(() => import("./CountryPage/CountryPage"));
+const MainPage = React.lazy(() => import("./MainPage/MainPage"));
 
 const getDefaultLanguage = () => {
   const lang = localStorage.getItem("language") ? localStorage.getItem("language") : "English";
@@ -18,8 +19,8 @@ const getDefaultLanguage = () => {
 };
 
 function App() {
-  const [seachData, setSeachData] = useState(storeExample);
-  const [data, setData] = useState(storeExample);
+  const [seachData, setSeachData] = useState([]);
+  const [data, setData] = useState([]);
   const [language, setLanguage] = useState(getDefaultLanguage());
 
   useEffect(() => {
@@ -42,15 +43,19 @@ function App() {
               <Authorization />
             </Route>*/}
             <Route path="/country/:name">
+            <React.Suspense fallback={<div>Load...</div>}>
               <CountryPage
                 countriesInfo={data}
                 language={language}
               />
+              </React.Suspense>
             </Route>
             <Route path="/">
+            <React.Suspense fallback={<div>Load...</div>}>
               <MainPage
                 countriesInfo={data}
               />
+              </React.Suspense>
             </Route>
           </Switch>
         </Router>
