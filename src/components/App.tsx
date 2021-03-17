@@ -52,9 +52,11 @@ function App() {
                 countriesInfo={data}
               />
             </Route>
-            </Switch>
-          <Footer />
+          </Switch>
         </Router>
+
+        <Footer />
+
       </Context.Provider>
     </>
   );

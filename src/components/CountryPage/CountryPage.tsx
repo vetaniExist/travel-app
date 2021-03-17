@@ -30,23 +30,26 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
       .then((data) => data.json())
       .then((dataJson) => {
         setCoord([dataJson.capital.lat, dataJson.capital.lon]);
+        console.log(dataJson);
         const country = {
           name: dataJson.name,
           capital: dataJson.capital.name,
           countryDescription: dataJson.description,
           countryFlagImage: dataJson.flag,
-          countryImage: "https://picsum.photos/id/1018/1000/600/"
-        };
+          countryImage: "https://picsum.photos/id/1018/1000/600/",
+          sights: dataJson.touristAttractions
+        }
         setCountry(country);
       });
   }, []);
+  
 
 
 
 
   return (
     <div className="countryPage">
-      <Slider />
+      <Slider country={country} isMainPage={false}/>
       <div className="wrapper">
         <CountryInfo country={country} />
         <Map

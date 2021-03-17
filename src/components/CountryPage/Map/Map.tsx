@@ -40,7 +40,7 @@ function Map(props) {
         lang: getAPILanguage(props.language)
       }}>
       <div>
-        My awesome application with maps!
+      <h2 className="countryDetailsTitle">Location:</h2>
       <YMap
           defaultState={{ center: [lat, lon], zoom: 9 }}
           width={"100%"}

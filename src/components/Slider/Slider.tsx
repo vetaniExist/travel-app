@@ -1,25 +1,41 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
-import { storeExample } from "../../store.example";
 
-const Slider = () => {
-  const listOfImages:any = storeExample.map((country: any) => {
-    const card = {
-      original: country.countryImage,
-      originalAlt: country.name,
-    };
-    return card;
-  });
+const lang = 'en';
 
-  const [images, setImages] = useState([]);
+interface SliderInfo {
+  country: any,
+  isMainPage: boolean
+}
 
-  useEffect(() => {
-    setImages(listOfImages);
-  }, [storeExample]);
+const Slider = ({country, isMainPage}: SliderInfo) => {
+  let listOfImages:any = [];
+  if (isMainPage) {
+    listOfImages = country.map((country:any) => {
+      return {
+        original: country.countryImage,
+        originalAlt: country.name,
+        description: country.name
+      }
+    });
+  } else {
+    if (country.sights) {
+      listOfImages = country.sights.map((sight:any) => {
+        return {
+          original: sight.image,
+          thumbnail: sight.preview.source ? sight.preview.source : sight.image,
+          thumbnailTitle: sight.name,
+          originalAlt: sight.name,
+          description: `${sight.name} - ${sight.description[0][lang]}`,
+        }
+      });
+    }
+    
+  }
 
   return (
       <div className='sliderContainer'>
-        {images.length !== 0 ? <ImageGallery items={images} showThumbnails={false} autoPlay={true} /> : null}
+        {listOfImages.length !== 0 ? isMainPage ? <ImageGallery items={listOfImages} showThumbnails={false} autoPlay={true} lazyLoad={true} /> : <ImageGallery items={listOfImages} showThumbnails={true} autoPlay={true} lazyLoad={true} /> : null}
       </div>
   );
 };
