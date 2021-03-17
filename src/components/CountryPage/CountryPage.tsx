@@ -40,26 +40,31 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencyCode: dataJson.currencies[0].code,
           currencyName: dataJson.currencies[0].name,
           currencySymbol: dataJson.currencies[0].symbol,
-        };
+          iso: dataJson.alpha2Code,
+        }
+
         setCountry(country);
       });
   }, []);
 
   return (
     <div className="countryPage">
-      <Slider country={country} isMainPage={false}/>
+      <Slider country={country} isMainPage={false} />
       <div className="wrapper">
         <CountryInfo country={country} />
         <Map
           language={language}
           coord={countryCapitalCoord}
+          iso={country.iso}
         />
+
         {country.currencyCode && <Widgets
           capital={country.capital}
           currencyCode={country.currencyCode}
           currencyName={country.currencyName}
           currencySymbol={country.currencySymbol}
         />}
+
         <Video />
       </div>
     </div>

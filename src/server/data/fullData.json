@@ -105,6 +105,9 @@
                 "name": "Algerian dinar",
                 "symbol": "د.ج"
             }
+        ],
+        "timezones": [
+            "UTC+01:00"
         ]
     },
     {
@@ -227,6 +230,16 @@
                 "name": "Australian dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC+05:00",
+            "UTC+06:30",
+            "UTC+07:00",
+            "UTC+08:00",
+            "UTC+09:30",
+            "UTC+10:00",
+            "UTC+10:30",
+            "UTC+11:30"
         ]
     },
     {
@@ -363,6 +376,9 @@
                 "name": "Bermudian dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-04:00"
         ]
     },
     {
@@ -490,6 +506,9 @@
                 "name": "United States dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC+07:00"
         ]
     },
     {
@@ -654,6 +673,9 @@
                 "name": "Chinese yuan",
                 "symbol": "¥"
             }
+        ],
+        "timezones": [
+            "UTC+08:00"
         ]
     },
     {
@@ -762,6 +784,9 @@
                 "name": "Costa Rican colón",
                 "symbol": "₡"
             }
+        ],
+        "timezones": [
+            "UTC-06:00"
         ]
     },
     {
@@ -889,6 +914,9 @@
                 "name": "Cuban peso",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-05:00"
         ]
     },
     {
@@ -1025,6 +1053,9 @@
                 "name": "Euro",
                 "symbol": "€"
             }
+        ],
+        "timezones": [
+            "UTC+02:00"
         ]
     },
     {
@@ -1133,6 +1164,9 @@
                 "name": "Djiboutian franc",
                 "symbol": "Fr"
             }
+        ],
+        "timezones": [
+            "UTC+03:00"
         ]
     },
     {
@@ -1255,6 +1289,9 @@
                 "name": "Dominican peso",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-04:00"
         ]
     },
     {
@@ -1377,6 +1414,9 @@
                 "name": "Eritrean nakfa",
                 "symbol": "Nfk"
             }
+        ],
+        "timezones": [
+            "UTC+03:00"
         ]
     },
     {
@@ -1485,6 +1525,9 @@
                 "name": "Georgian Lari",
                 "symbol": "ლ"
             }
+        ],
+        "timezones": [
+            "UTC-05:00"
         ]
     },
     {
@@ -1607,6 +1650,9 @@
                 "name": "Ghanaian cedi",
                 "symbol": "₵"
             }
+        ],
+        "timezones": [
+            "UTC"
         ]
     },
     {
@@ -1715,6 +1761,9 @@
                 "name": "Hong Kong dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC+08:00"
         ]
     },
     {
@@ -1851,6 +1900,9 @@
                 "name": "Iraqi dinar",
                 "symbol": "ع.د"
             }
+        ],
+        "timezones": [
+            "UTC+03:00"
         ]
     },
     {
@@ -1959,6 +2011,9 @@
                 "name": "Libyan dinar",
                 "symbol": "ل.د"
             }
+        ],
+        "timezones": [
+            "UTC+01:00"
         ]
     },
     {
@@ -2095,6 +2150,9 @@
                 "name": "Malaysian ringgit",
                 "symbol": "RM"
             }
+        ],
+        "timezones": [
+            "UTC+08:00"
         ]
     },
     {
@@ -2217,6 +2275,11 @@
                 "name": "Mexican peso",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-08:00",
+            "UTC-07:00",
+            "UTC-06:00"
         ]
     },
     {
@@ -2353,6 +2416,9 @@
                 "name": "Nepalese rupee",
                 "symbol": "₨"
             }
+        ],
+        "timezones": [
+            "UTC+05:45"
         ]
     },
     {
@@ -2461,6 +2527,13 @@
                 "name": "New Zealand dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-11:00",
+            "UTC-10:00",
+            "UTC+12:00",
+            "UTC+12:45",
+            "UTC+13:00"
         ]
     },
     {
@@ -2569,6 +2642,9 @@
                 "name": "Qatari riyal",
                 "symbol": "ر.ق"
             }
+        ],
+        "timezones": [
+            "UTC+03:00"
         ]
     },
     {
@@ -2677,6 +2753,9 @@
                 "name": "Euro",
                 "symbol": "€"
             }
+        ],
+        "timezones": [
+            "UTC+01:00"
         ]
     },
     {
@@ -2785,6 +2864,9 @@
                 "name": "Serbian dinar",
                 "symbol": "дин."
             }
+        ],
+        "timezones": [
+            "UTC+01:00"
         ]
     },
     {
@@ -2907,6 +2989,9 @@
                 "name": "Seychellois rupee",
                 "symbol": "₨"
             }
+        ],
+        "timezones": [
+            "UTC+04:00"
         ]
     },
     {
@@ -3015,6 +3100,9 @@
                 "name": "Euro",
                 "symbol": "€"
             }
+        ],
+        "timezones": [
+            "UTC+01:00"
         ]
     },
     {
@@ -3123,6 +3211,9 @@
                 "name": "Somali shilling",
                 "symbol": "Sh"
             }
+        ],
+        "timezones": [
+            "UTC+03:00"
         ]
     },
     {
@@ -3245,6 +3336,9 @@
                 "name": "Sri Lankan rupee",
                 "symbol": "Rs"
             }
+        ],
+        "timezones": [
+            "UTC+05:30"
         ]
     },
     {
@@ -3353,6 +3447,9 @@
                 "name": "Thai baht",
                 "symbol": "฿"
             }
+        ],
+        "timezones": [
+            "UTC+07:00"
         ]
     },
     {
@@ -3475,6 +3572,9 @@
                 "name": "Tongan paʻanga",
                 "symbol": "T$"
             }
+        ],
+        "timezones": [
+            "UTC+13:00"
         ]
     },
     {
@@ -3583,6 +3683,9 @@
                 "name": "Trinidad and Tobago dollar",
                 "symbol": "$"
             }
+        ],
+        "timezones": [
+            "UTC-04:00"
         ]
     },
     {
@@ -3691,6 +3794,9 @@
                 "name": "Vietnamese đồng",
                 "symbol": "₫"
             }
+        ],
+        "timezones": [
+            "UTC+07:00"
         ]
     }
 ]
