@@ -33,5 +33,11 @@ body, #app {
     font-size: 24px;
     color: $light-font-color;
     box-shadow: 5px 5px 10px 0 rgba(34, 60, 80, 0.2);
+    &_widget {
+        justify-content: flex-start;
+    }
+}
 
+.widgetTextItem {
+    margin: 7px 0;
 }

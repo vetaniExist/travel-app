@@ -30,7 +30,6 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
       .then((data) => data.json())
       .then((dataJson) => {
         setCoord([dataJson.capital.lat, dataJson.capital.lon]);
-        console.log(dataJson);
         const country = {
           name: dataJson.name,
           capital: dataJson.capital.name,
@@ -38,8 +37,12 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           countryFlagImage: dataJson.flag,
           countryImage: "https://picsum.photos/id/1018/1000/600/",
           sights: dataJson.touristAttractions,
+          currencyCode: dataJson.currencies[0].code,
+          currencyName: dataJson.currencies[0].name,
+          currencySymbol: dataJson.currencies[0].symbol,
           iso: dataJson.alpha2Code,
         }
+
         setCountry(country);
       });
   }, []);
@@ -54,11 +57,17 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           coord={countryCapitalCoord}
           iso={country.iso}
         />
-        <Widgets capital={country.capital} />
+
+        {country.currencyCode && <Widgets
+          capital={country.capital}
+          currencyCode={country.currencyCode}
+          currencyName={country.currencyName}
+          currencySymbol={country.currencySymbol}
+        />}
+
         <Video />
       </div>
     </div>
-
   );
 }
 
