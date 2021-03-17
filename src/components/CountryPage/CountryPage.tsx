@@ -23,6 +23,7 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
   const [countryCapitalCoord, setCoord] = useState([-21.13938, -175.2018]);
   const [country, setCountry] = useState(countriesInfo.find(item => item.name === name) || countriesInfo[0]);
 
+  
   useEffect(() => {
     fetch("https://travel-app-v.herokuapp.com/api/country/" + name, {
       mode: 'cors',
@@ -37,6 +38,7 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           countryFlagImage: dataJson.flag,
           countryImage: "https://picsum.photos/id/1018/1000/600/",
           sights: dataJson.touristAttractions,
+          videoId: dataJson.videoId,
           currencyCode: dataJson.currencies[0].code,
           currencyName: dataJson.currencies[0].name,
           currencySymbol: dataJson.currencies[0].symbol,
@@ -57,15 +59,13 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           coord={countryCapitalCoord}
           iso={country.iso}
         />
-
         {country.currencyCode && <Widgets
           capital={country.capital}
           currencyCode={country.currencyCode}
           currencyName={country.currencyName}
           currencySymbol={country.currencySymbol}
         />}
-
-        <Video />
+       <Video videoId={country.videoId}/>
       </div>
     </div>
   );

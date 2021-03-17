@@ -6,7 +6,14 @@ interface CountryInfoProps {
 }
 
 function CountryInfo({ country }: CountryInfoProps) {
-  const { name, capital, countryDescription, countryFlagImage } = country;
+  if (!country) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+  const {
+    name, capital, countryDescription, countryFlagImage,
+  } = country;
   return (
     <>
       <div className="countryDetails">
