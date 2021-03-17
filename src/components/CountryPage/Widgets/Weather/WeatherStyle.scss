@@ -1,9 +1,13 @@
 @import '../../../../common/commonStyles';
 @import "../../../../common/constants";
 
-
 .weather {
   background-color: #9ABAF3;
   display: flex;
   justify-content: flex-start;
+   &__icon{
+    width: 50px;
+    margin: 0;
+    vertical-align: middle;
+  }
 }

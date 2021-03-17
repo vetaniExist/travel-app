@@ -1,15 +1,18 @@
 import React from "react";
 import "./WeatherStyle.scss"
 
-function Weather({weather}) {
+function Weather({weather, iconUrl, capital}) {
 
-  const { temperature, description, humidity } = weather;
+  const { mainWeather, temperature, description, humidity } = weather;
 
 
   return (
     <div className="card__template weather">
       <div>
-        <h4>Weather</h4>
+        <h4>
+          {mainWeather} in {capital}
+          <img src={iconUrl} alt={description} className="weather__icon" />
+        </h4>
         <div>Temperature: {temperature}°C</div>
         <div>Humidity: {humidity}%</div>
         <div>{description}</div>

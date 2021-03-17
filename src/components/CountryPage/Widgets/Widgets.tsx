@@ -16,19 +16,24 @@ function Widgets({capital}) {
       .then(weatherJson => {
         console.log('datalist loaded', weatherJson);
         const weather = {
+          name: weatherJson.name,
+          mainWeather: weatherJson.weather[0].main,
           temperature: Math.round(weatherJson.main.temp),
           description: weatherJson.weather[0].description,
           humidity: Math.round(weatherJson.main.humidity),
+          icon: weatherJson.weather[0].icon,
         };
+
         console.log('datalist loaded', weatherJson);
         setWeather(weather);
       });
 
   }, []);
+  const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
 
   return (
     <div className="widgets">
-      <Weather weather={weather} />
+      <Weather weather={weather} iconUrl={iconUrl} capital={capital}/>
       <Date />
       <Currency/>
 
