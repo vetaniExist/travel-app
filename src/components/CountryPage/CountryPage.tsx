@@ -37,26 +37,24 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           countryDescription: dataJson.description,
           countryFlagImage: dataJson.flag,
           countryImage: "https://picsum.photos/id/1018/1000/600/",
-          sights: dataJson.touristAttractions
+          sights: dataJson.touristAttractions,
+          iso: dataJson.alpha2Code,
         }
         setCountry(country);
       });
   }, []);
-  
-
-
-
 
   return (
     <div className="countryPage">
-      <Slider country={country} isMainPage={false}/>
+      <Slider country={country} isMainPage={false} />
       <div className="wrapper">
         <CountryInfo country={country} />
         <Map
           language={language}
           coord={countryCapitalCoord}
+          iso={country.iso}
         />
-        <Widgets capital={country.capital}/>
+        <Widgets capital={country.capital} />
         <Video />
       </div>
     </div>

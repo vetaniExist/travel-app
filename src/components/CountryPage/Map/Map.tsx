@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import "./MapStyles.scss";
 
@@ -33,6 +33,45 @@ function getAPILanguage(sysLang) {
 function Map(props) {
   const lat = props.coord[0];
   const lon = props.coord[1];
+  const mapRef = useRef();
+
+  // https://github.com/gribnoysup/react-yandex-maps/issues/186
+  const getRegions = ymaps => {
+    if (mapRef && mapRef.current) {
+      const objectManager = new ymaps.ObjectManager();
+      ymaps.borders.load('001').then(function (result) {
+        const regions = result.features.reduce(function (acc, feature) {
+
+          const iso = feature.properties.iso3166;
+          feature.id = iso;
+          feature.options = {
+            fillOpacity: 0.3,
+            strokeColor: "#AAA",
+            strokeOpacity: 1
+          };
+
+          acc[iso] = feature;
+          return acc;
+        }, {});
+
+        function paint(region) {
+          region.options.fillColor = "rgba(240,52,52,1)";
+        }
+
+        paint(regions[props.iso]);
+
+        result.features = [];
+        for (let reg in regions) {
+          result.features.push(regions[reg]);
+        }
+
+        objectManager.add(result);
+        mapRef.current.geoObjects.add(objectManager);
+      });
+    }
+  };
+
+
   return (
     <YMaps
       key={props.language + props.coord}
@@ -40,12 +79,14 @@ function Map(props) {
         lang: getAPILanguage(props.language)
       }}>
       <div>
-      <h2 className="countryDetailsTitle">Location:</h2>
+        My awesome application with maps!
       <YMap
-          defaultState={{ center: [lat, lon], zoom: 9 }}
+          instanceRef={mapRef}
+          defaultState={{ center: [lat, lon], zoom: 3 }}
           width={"100%"}
           height={"600px"}
-          // onLoad={ymaps => console.log(ymaps)}
+          onLoad={ymaps => getRegions(ymaps)}
+          modules={["borders", "ObjectManager"]}
         >
           <Placemark geometry={[lat, lon]} />
         </YMap>
