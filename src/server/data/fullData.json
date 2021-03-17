@@ -98,7 +98,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=984eced98e341e8826dd654c49e18623&ref=rim&n=33&w=250&h=188",
         "videoId": "Rh0uDv0qxDs",
-        "alpha2Code": "DZ"
+        "alpha2Code": "DZ",
+        "currencies": [
+            {
+                "code": "DZD",
+                "name": "Algerian dinar",
+                "symbol": "د.ج"
+            }
+        ]
     },
     {
         "name": "Australia",
@@ -213,7 +220,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=63e673b84ebee43c1714dfbff3fc1d54&ref=rim&n=33&w=333&h=188",
         "videoId": "PdVLk_dPmtc",
-        "alpha2Code": "AU"
+        "alpha2Code": "AU",
+        "currencies": [
+            {
+                "code": "AUD",
+                "name": "Australian dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Bermuda",
@@ -342,7 +356,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=e42e206a10d485c3e1dec159a71e33d1&ref=rim&n=33&w=282&h=188",
         "videoId": "J7DWwuo-XY8",
-        "alpha2Code": "BM"
+        "alpha2Code": "BM",
+        "currencies": [
+            {
+                "code": "BMD",
+                "name": "Bermudian dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Cambodia",
@@ -457,7 +478,19 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=e63bb8f8fbbe7a1ef348fb0014e9ed7e&ref=rim&n=33&w=281&h=188",
         "videoId": "W3DGxLC8kk8",
-        "alpha2Code": "KH"
+        "alpha2Code": "KH",
+        "currencies": [
+            {
+                "code": "KHR",
+                "name": "Cambodian riel",
+                "symbol": "៛"
+            },
+            {
+                "code": "USD",
+                "name": "United States dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "China",
@@ -614,7 +647,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=313e34bdbdfa61694fc32aa5d0022753&ref=rim&n=33&w=333&h=188",
         "videoId": "",
-        "alpha2Code": "CN"
+        "alpha2Code": "CN",
+        "currencies": [
+            {
+                "code": "CNY",
+                "name": "Chinese yuan",
+                "symbol": "¥"
+            }
+        ]
     },
     {
         "name": "Costa Rica",
@@ -715,7 +755,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=de6f6f658854e62c9ffd88a8dcf9cc0b&ref=rim&n=33&w=323&h=188",
         "videoId": "EotbKqZmBuY",
-        "alpha2Code": "CR"
+        "alpha2Code": "CR",
+        "currencies": [
+            {
+                "code": "CRC",
+                "name": "Costa Rican colón",
+                "symbol": "₡"
+            }
+        ]
     },
     {
         "name": "Cuba",
@@ -830,7 +877,19 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=3c311286f836de53e6858149875db9c1&ref=rim&n=33&w=285&h=188",
         "videoId": "N4ZMYokojGw",
-        "alpha2Code": "CU"
+        "alpha2Code": "CU",
+        "currencies": [
+            {
+                "code": "CUC",
+                "name": "Cuban convertible peso",
+                "symbol": "$"
+            },
+            {
+                "code": "CUP",
+                "name": "Cuban peso",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Cyprus",
@@ -959,7 +1018,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=849d5e60446bf0b836070d1262a82675&ref=rim&n=33&w=281&h=188",
         "videoId": "YMZ1oNylJ4A",
-        "alpha2Code": "CY"
+        "alpha2Code": "CY",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ]
     },
     {
         "name": "Djibouti",
@@ -1060,7 +1126,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=587cdb3f16279c7b2cc8dddc248162d3&ref=rim&n=33&w=350&h=188",
         "videoId": "rwIHmaP0uJo",
-        "alpha2Code": "DJ"
+        "alpha2Code": "DJ",
+        "currencies": [
+            {
+                "code": "DJF",
+                "name": "Djiboutian franc",
+                "symbol": "Fr"
+            }
+        ]
     },
     {
         "name": "Dominican Republic",
@@ -1175,7 +1248,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=3ab7938e7e3b877cdfaa502852b0f133&ref=rim&n=33&w=333&h=188",
         "videoId": "lePzGgWA6UA",
-        "alpha2Code": "DO"
+        "alpha2Code": "DO",
+        "currencies": [
+            {
+                "code": "DOP",
+                "name": "Dominican peso",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Eritrea",
@@ -1290,7 +1370,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=20174c78521b26aa644e4f3b16013475&ref=rim&n=33&w=250&h=188",
         "videoId": "svezgqe5fOA",
-        "alpha2Code": "ER"
+        "alpha2Code": "ER",
+        "currencies": [
+            {
+                "code": "ERN",
+                "name": "Eritrean nakfa",
+                "symbol": "Nfk"
+            }
+        ]
     },
     {
         "name": "Georgia",
@@ -1391,7 +1478,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=eb6d86beeede622033caed9c9060b79d&ref=rim&n=33&w=281&h=188",
         "videoId": "KNUcUBdYT58",
-        "alpha2Code": "GE"
+        "alpha2Code": "GE",
+        "currencies": [
+            {
+                "code": "GEL",
+                "name": "Georgian Lari",
+                "symbol": "ლ"
+            }
+        ]
     },
     {
         "name": "Ghana",
@@ -1506,7 +1600,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=942907d2561aacfe159976f21a0a47a8&ref=rim&n=33&w=300&h=188",
         "videoId": "Up052rBO0Rs",
-        "alpha2Code": "GH"
+        "alpha2Code": "GH",
+        "currencies": [
+            {
+                "code": "GHS",
+                "name": "Ghanaian cedi",
+                "symbol": "₵"
+            }
+        ]
     },
     {
         "name": "Hong Kong",
@@ -1607,7 +1708,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=30ce3732e023c5e35566d4ca5af5ac26&ref=rim&n=33&w=282&h=188",
         "videoId": "72__Mdioty8",
-        "alpha2Code": "HK"
+        "alpha2Code": "HK",
+        "currencies": [
+            {
+                "code": "HKD",
+                "name": "Hong Kong dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Iraq",
@@ -1736,7 +1844,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=f375f5f511477a1a92c43cb55c47a977&ref=rim&n=33&w=250&h=188",
         "videoId": "WYN0sWxhlH4",
-        "alpha2Code": "IQ"
+        "alpha2Code": "IQ",
+        "currencies": [
+            {
+                "code": "IQD",
+                "name": "Iraqi dinar",
+                "symbol": "ع.د"
+            }
+        ]
     },
     {
         "name": "Libya",
@@ -1837,7 +1952,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=0f5f05dc00ebb231e08304e550c0764b&ref=rim&n=33&w=281&h=188",
         "videoId": "c_PSSrm8OA0",
-        "alpha2Code": "LY"
+        "alpha2Code": "LY",
+        "currencies": [
+            {
+                "code": "LYD",
+                "name": "Libyan dinar",
+                "symbol": "ل.د"
+            }
+        ]
     },
     {
         "name": "Malaysia",
@@ -1966,7 +2088,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=540198dbf45a54a9c831bb55571cff14&ref=rim&n=33&w=333&h=188",
         "videoId": "mtIeLsMbfzg",
-        "alpha2Code": "MY"
+        "alpha2Code": "MY",
+        "currencies": [
+            {
+                "code": "MYR",
+                "name": "Malaysian ringgit",
+                "symbol": "RM"
+            }
+        ]
     },
     {
         "name": "Mexico",
@@ -2081,7 +2210,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=759fa63a856acc5a15187ff7ce1fed85&ref=rim&n=33&w=333&h=188",
         "videoId": "n8HTyJPXVug",
-        "alpha2Code": "MX"
+        "alpha2Code": "MX",
+        "currencies": [
+            {
+                "code": "MXN",
+                "name": "Mexican peso",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Nepal",
@@ -2210,7 +2346,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=7f25bea189a7d6664b5af655f5e9767d&ref=rim&n=33&w=250&h=188",
         "videoId": "89s6vHB6_Gw",
-        "alpha2Code": "NP"
+        "alpha2Code": "NP",
+        "currencies": [
+            {
+                "code": "NPR",
+                "name": "Nepalese rupee",
+                "symbol": "₨"
+            }
+        ]
     },
     {
         "name": "New Zealand",
@@ -2311,7 +2454,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=329bbb43ca9a87da7789b9ecaedd34e7&ref=rim&n=33&w=250&h=188",
         "videoId": "8jypK2U1AM0",
-        "alpha2Code": "NZ"
+        "alpha2Code": "NZ",
+        "currencies": [
+            {
+                "code": "NZD",
+                "name": "New Zealand dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Qatar",
@@ -2412,7 +2562,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=38cde9baf6cf2dea75a2996d9b3078ab&ref=rim&n=33&w=325&h=188",
         "videoId": "V8ksSGxo6no",
-        "alpha2Code": "QA"
+        "alpha2Code": "QA",
+        "currencies": [
+            {
+                "code": "QAR",
+                "name": "Qatari riyal",
+                "symbol": "ر.ق"
+            }
+        ]
     },
     {
         "name": "San Marino",
@@ -2513,7 +2670,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=57bd2dcf2de9a67de268390ba25b9616&ref=rim&n=33&w=282&h=188",
         "videoId": "KLvDb3L1b60",
-        "alpha2Code": "SM"
+        "alpha2Code": "SM",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ]
     },
     {
         "name": "Serbia",
@@ -2614,7 +2778,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=0c63749e79f085c68ef1b9ad4af00b77&ref=rim&n=33&w=282&h=188",
         "videoId": "8qk6azj_Y78",
-        "alpha2Code": "RS"
+        "alpha2Code": "RS",
+        "currencies": [
+            {
+                "code": "RSD",
+                "name": "Serbian dinar",
+                "symbol": "дин."
+            }
+        ]
     },
     {
         "name": "Seychelles",
@@ -2729,7 +2900,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=35be577dba95b149be5c2515b8071f72&ref=rim&n=33&w=293&h=188",
         "videoId": "mWjcaEZ5-pM",
-        "alpha2Code": "SC"
+        "alpha2Code": "SC",
+        "currencies": [
+            {
+                "code": "SCR",
+                "name": "Seychellois rupee",
+                "symbol": "₨"
+            }
+        ]
     },
     {
         "name": "Slovenia",
@@ -2830,7 +3008,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=a0b3a617f98ce44ebb1de9f5c03cf284&ref=rim&n=33&w=301&h=188",
         "videoId": "D4HTPcS_xeI",
-        "alpha2Code": "SI"
+        "alpha2Code": "SI",
+        "currencies": [
+            {
+                "code": "EUR",
+                "name": "Euro",
+                "symbol": "€"
+            }
+        ]
     },
     {
         "name": "Somalia",
@@ -2931,7 +3116,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=77a1370c88a8ee12eba059d76397aa98&ref=rim&n=33&w=281&h=188",
         "videoId": "bfxKAC7ti-A",
-        "alpha2Code": "SO"
+        "alpha2Code": "SO",
+        "currencies": [
+            {
+                "code": "SOS",
+                "name": "Somali shilling",
+                "symbol": "Sh"
+            }
+        ]
     },
     {
         "name": "Sri Lanka",
@@ -3046,7 +3238,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=0b10b60377d7297f12444fc839e242ca&ref=rim&n=33&w=281&h=188",
         "videoId": "q0mbKsKG-ng",
-        "alpha2Code": "LK"
+        "alpha2Code": "LK",
+        "currencies": [
+            {
+                "code": "LKR",
+                "name": "Sri Lankan rupee",
+                "symbol": "Rs"
+            }
+        ]
     },
     {
         "name": "Thailand",
@@ -3147,7 +3346,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=01d189556a64fba3e3cc0d8168be58fb&ref=rim&n=33&w=281&h=188",
         "videoId": "cgdcRl5UY9g",
-        "alpha2Code": "TH"
+        "alpha2Code": "TH",
+        "currencies": [
+            {
+                "code": "THB",
+                "name": "Thai baht",
+                "symbol": "฿"
+            }
+        ]
     },
     {
         "name": "Tonga",
@@ -3262,7 +3468,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=3b016ca78151f67612dbf2be92bd7ba5&ref=rim&n=33&w=305&h=188",
         "videoId": "6_hOerZmU5U",
-        "alpha2Code": "TO"
+        "alpha2Code": "TO",
+        "currencies": [
+            {
+                "code": "TOP",
+                "name": "Tongan paʻanga",
+                "symbol": "T$"
+            }
+        ]
     },
     {
         "name": "Trinidad and Tobago",
@@ -3363,7 +3576,14 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=9974062a8519bb7bab59ba713359e7e5&ref=rim&n=33&w=321&h=188",
         "videoId": "QJoluvAn46U",
-        "alpha2Code": "TT"
+        "alpha2Code": "TT",
+        "currencies": [
+            {
+                "code": "TTD",
+                "name": "Trinidad and Tobago dollar",
+                "symbol": "$"
+            }
+        ]
     },
     {
         "name": "Viet Nam",
@@ -3464,6 +3684,13 @@
         ],
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=ebec1c28a194dac3d2de9ad4ebef9fe3&ref=rim&n=33&w=237&h=188",
         "videoId": "3M0TmN2TsK4",
-        "alpha2Code": "VN"
+        "alpha2Code": "VN",
+        "currencies": [
+            {
+                "code": "VND",
+                "name": "Vietnamese đồng",
+                "symbol": "₫"
+            }
+        ]
     }
 ]
