@@ -37,7 +37,9 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           countryDescription: dataJson.description,
           countryFlagImage: dataJson.flag,
           countryImage: "https://picsum.photos/id/1018/1000/600/",
-          sights: dataJson.touristAttractions
+          sights: dataJson.touristAttractions,
+          alpha2Code: dataJson.alpha2Code,
+          timezone: dataJson.timezones[0]
         }
         setCountry(country);
       });
@@ -56,7 +58,7 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           language={language}
           coord={countryCapitalCoord}
         />
-        <Widgets capital={country.capital}/>
+        <Widgets capital={country.capital} countryCode={country.alpha2Code} timezone={country.timezone}/>
         <Video />
       </div>
     </div>

@@ -4,7 +4,7 @@ import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
 import "./WidgetsStyle.scss"
 
-function Widgets({capital}) {
+function Widgets({capital, countryCode, timezone}) {
 
   const [weather, setWeather] = useState('');
 
@@ -14,7 +14,6 @@ function Widgets({capital}) {
     fetch(weatherUrl)
       .then(res => res.json())
       .then(weatherJson => {
-        console.log('datalist loaded', weatherJson);
         const weather = {
           name: weatherJson.name,
           mainWeather: weatherJson.weather[0].main,
@@ -23,8 +22,6 @@ function Widgets({capital}) {
           humidity: Math.round(weatherJson.main.humidity),
           icon: weatherJson.weather[0].icon,
         };
-
-        console.log('datalist loaded', weatherJson);
         setWeather(weather);
       });
 
@@ -34,7 +31,7 @@ function Widgets({capital}) {
   return (
     <div className="widgets">
       <Weather weather={weather} iconUrl={iconUrl} capital={capital}/>
-      <Date />
+      <Date capital={capital} countryCode={countryCode} timezone={timezone}/>
       <Currency/>
 
     </div>
