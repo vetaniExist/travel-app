@@ -4,8 +4,7 @@ import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
 import "./WidgetsStyle.scss"
 
-function Widgets({capital, currencyCode, currencyName, currencySymbol}) {
-
+function Widgets({capital, currencyCode, currencyName, currencySymbol, countryCode, timezone}) {
   const [weather, setWeather] = useState('');
   const [currencyRates, setCurrencyRates] = useState('');
 
@@ -54,9 +53,8 @@ function Widgets({capital, currencyCode, currencyName, currencySymbol}) {
   return (
     <div className="widgets">
       <Weather weather={weather} iconUrl={iconUrl} capital={capital}/>
-      <Date />
+      <Date capital={capital} countryCode={countryCode} timezone={timezone}/>
       <Currency currencyRates={currencyRates} currencyName={currencyName} currencySymbol={currencySymbol}/>
-
     </div>
 
   );

@@ -43,6 +43,8 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencyName: dataJson.currencies[0].name,
           currencySymbol: dataJson.currencies[0].symbol,
           iso: dataJson.alpha2Code,
+          alpha2Code: dataJson.alpha2Code,
+          timezone: dataJson.timezones[0]
         }
 
         setCountry(country);
@@ -64,8 +66,11 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencyCode={country.currencyCode}
           currencyName={country.currencyName}
           currencySymbol={country.currencySymbol}
+          timezone={country.timezone}
+          countryCode={country.iso}
         />}
        <Video videoId={country.videoId}/>
+       
       </div>
     </div>
   );
