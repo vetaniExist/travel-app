@@ -47,9 +47,6 @@ function Map(props) {
       const objectManager = new ymaps.ObjectManager();
       ymaps.borders.load('001').then(function (result) {
         const regions = result.features.reduce(function (acc, feature) {
-          feature.events.add('click', function () {
-            alert('Oh, an event!!');
-          })
           const iso = feature.properties.iso3166;
           feature.id = iso;
           feature.options = {
