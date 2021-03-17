@@ -19,8 +19,8 @@ const getDefaultLanguage = () => {
 };
 
 function App() {
-  const [seachData, setSeachData] = useState([]);
-  const [data, setData] = useState([]);
+  const [seachData, setSeachData] = useState(storeExample);
+  const [data, setData] = useState(storeExample);
   const [language, setLanguage] = useState(getDefaultLanguage());
 
   useEffect(() => {
