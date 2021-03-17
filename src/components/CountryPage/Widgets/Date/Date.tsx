@@ -24,7 +24,7 @@ function DateTimeWidget({capital, countryCode, timezone}) {
         setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
       }, 1000);
 
-    return () => clearInterval(timer);
+    return () => clearTimeout(timer);
   });
 
   return (
