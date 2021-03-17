@@ -16,6 +16,7 @@ fullData.forEach((country) => {
     videoId: country.videoId,
     alpha2Code: country.alpha2Code,
     currencies: country.currencies,
+    timezones: country.timezones,
 
   };
   data[country.name.toLowerCase()] = dataObj;
