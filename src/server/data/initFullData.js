@@ -4,6 +4,7 @@ const data = [];
 
 fullData.forEach((country) => {
   const dataObj = {
+    name: country.name,
     description: country.description,
     nativeName: country.nativeName,
     capital: country.capital,

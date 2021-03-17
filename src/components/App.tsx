@@ -35,11 +35,10 @@ function App() {
   return (
     <>
       <Context.Provider value={[data, setData, seachData]}>
-        <Header />
-
         <Router>
-          <Switch>
-            {/* <Route path="/authorization">
+          <Header />
+            <Switch>
+              {/* <Route path="/authorization">
               <Authorization />
             </Route>*/}
             <Route path="/country/:name">
@@ -57,6 +56,7 @@ function App() {
         </Router>
 
         <Footer />
+
       </Context.Provider>
     </>
   );

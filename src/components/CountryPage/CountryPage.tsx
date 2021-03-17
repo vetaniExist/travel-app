@@ -21,7 +21,6 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
   "lon": -175.2018 */
   const { name } = useParams<ParamTypes>();
   const [countryCapitalCoord, setCoord] = useState([-21.13938, -175.2018]);
-
   const [country, setCountry] = useState(countriesInfo.find(item => item.name === name) || countriesInfo[0]);
 
   useEffect(() => {
@@ -45,6 +44,9 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
   }, []);
   
 
+
+
+
   return (
     <div className="countryPage">
       <Slider country={country} isMainPage={false}/>
@@ -54,7 +56,7 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           language={language}
           coord={countryCapitalCoord}
         />
-        <Widgets />
+        <Widgets capital={country.capital}/>
         <Video />
       </div>
     </div>
