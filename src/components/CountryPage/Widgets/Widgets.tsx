@@ -4,10 +4,14 @@ import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
 import "./WidgetsStyle.scss"
 
-function Widgets({capital}) {
+function Widgets({capital, currencyCode, currencyName, currencySymbol}) {
 
   const [weather, setWeather] = useState('');
-  const [currency, setCurrency] = useState('');
+  const [currencyRates, setCurrencyRates] = useState('');
+
+  console.log('currency destructurization', currencyCode, currencyName, currencySymbol);
+  console.log(typeof(currencyCode));
+
 
   useEffect(() =>{
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&lang=en&appid=22d4766f7d2759a9e613e180a9efc542&units=metric`;
@@ -32,24 +36,21 @@ function Widgets({capital}) {
   const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
 
   useEffect(() =>{
-    const currencyUrl = `https://v6.exchangerate-api.com/v6/a9ef46a9e2b66f8e834cd9e8/latest/USD`;
+    const currencyUrl = `https://v6.exchangerate-api.com/v6/a9ef46a9e2b66f8e834cd9e8/latest/${currencyCode}`;
 
     fetch(currencyUrl)
       .then(res => res.json())
       .then(currencyJson => {
         console.log('currency loaded', currencyJson);
-        const currency = {
-          AUD: currencyJson.conversion_rates.AUD,
+        const currencyRates = {
           EUR: currencyJson.conversion_rates.EUR,
           USD: currencyJson.conversion_rates.USD,
           RUB: currencyJson.conversion_rates.RUB,
           BYN: currencyJson.conversion_rates.BYN,
           UAH: currencyJson.conversion_rates.UAH,
-
         };
 
-        console.log('weather loaded', currencyJson);
-        setCurrency(currency);
+        setCurrencyRates(currencyRates);
       });
 
   }, []);
@@ -58,7 +59,7 @@ function Widgets({capital}) {
     <div className="widgets">
       <Weather weather={weather} iconUrl={iconUrl} capital={capital}/>
       <Date />
-      <Currency currency={currency}/>
+      <Currency currencyRates={currencyRates} currencyName={currencyName} currencySymbol={currencySymbol}/>
 
     </div>
 

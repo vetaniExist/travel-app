@@ -37,15 +37,16 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           countryDescription: dataJson.description,
           countryFlagImage: dataJson.flag,
           countryImage: "https://picsum.photos/id/1018/1000/600/",
-          sights: dataJson.touristAttractions
-        }
+          sights: dataJson.touristAttractions,
+          currencyCode: dataJson.currencies[0].code,
+          currencyName: dataJson.currencies[0].name,
+          currencySymbol: dataJson.currencies[0].symbol,
+        };
+
+        console.log("currencyCode", country.currencyCode);
         setCountry(country);
       });
   }, []);
-  
-
-
-
 
   return (
     <div className="countryPage">
@@ -56,11 +57,15 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           language={language}
           coord={countryCapitalCoord}
         />
-        <Widgets capital={country.capital}/>
+        <Widgets
+          capital={country.capital}
+          currencyCode={country.currencyCode}
+          currencyName={country.currencyName}
+          currencySymbol={country.currencySymbol}
+        />
         <Video />
       </div>
     </div>
-
   );
 }
 
