@@ -9,10 +9,6 @@ function Widgets({capital, currencyCode, currencyName, currencySymbol}) {
   const [weather, setWeather] = useState('');
   const [currencyRates, setCurrencyRates] = useState('');
 
-  console.log('currency destructurization', currencyCode, currencyName, currencySymbol);
-  console.log(typeof(currencyCode));
-
-
   useEffect(() =>{
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&lang=en&appid=22d4766f7d2759a9e613e180a9efc542&units=metric`;
 
@@ -28,20 +24,20 @@ function Widgets({capital, currencyCode, currencyName, currencySymbol}) {
           icon: weatherJson.weather[0].icon,
         };
 
-        console.log('weather loaded', weatherJson);
         setWeather(weather);
       });
 
+
   }, []);
+
   const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
 
-  useEffect(() =>{
+  useEffect(() => {
     const currencyUrl = `https://v6.exchangerate-api.com/v6/a9ef46a9e2b66f8e834cd9e8/latest/${currencyCode}`;
 
     fetch(currencyUrl)
       .then(res => res.json())
       .then(currencyJson => {
-        console.log('currency loaded', currencyJson);
         const currencyRates = {
           EUR: currencyJson.conversion_rates.EUR,
           USD: currencyJson.conversion_rates.USD,

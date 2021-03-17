@@ -8,7 +8,7 @@ function Currency({currencyRates, currencyName, currencySymbol}) {
   return (
     <div className="card__template card__template_widget currency">
 
-      <h4>Currency exchange {currencyName} {currencySymbol}</h4>
+      <h4> {currencyName} {currencySymbol}</h4>
 
       <div className="widgetTextItem">EUR {EUR}</div>
       <div className="widgetTextItem">USD {USD}</div>

@@ -30,7 +30,6 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
       .then((data) => data.json())
       .then((dataJson) => {
         setCoord([dataJson.capital.lat, dataJson.capital.lon]);
-        console.log(dataJson);
         const country = {
           name: dataJson.name,
           capital: dataJson.capital.name,
@@ -42,8 +41,6 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencyName: dataJson.currencies[0].name,
           currencySymbol: dataJson.currencies[0].symbol,
         };
-
-        console.log("currencyCode", country.currencyCode);
         setCountry(country);
       });
   }, []);
@@ -57,12 +54,12 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           language={language}
           coord={countryCapitalCoord}
         />
-        <Widgets
+        {country.currencyCode && <Widgets
           capital={country.capital}
           currencyCode={country.currencyCode}
           currencyName={country.currencyName}
           currencySymbol={country.currencySymbol}
-        />
+        />}
         <Video />
       </div>
     </div>
