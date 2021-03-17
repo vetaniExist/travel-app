@@ -1,3 +1,6 @@
+import Widgets from "./components/CountryPage/Widgets/Widgets";
+import React from "react";
+
 export interface ICountry {
   id: string,
   name: string;
@@ -6,6 +9,9 @@ export interface ICountry {
   countryDescription: string;
   countryFlagImage: string;
   sights: ISights[];
+  currencyCode: string;
+  currencyName: string;
+  currencySymbol: any;
   // video: IVideo[];
   // map: any;
 }

@@ -4,4 +4,11 @@
 
 .currency {
   background-color: #5EC49F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h4 {
+    text-align: center;
+    margin: 20px 0;
+  }
 }

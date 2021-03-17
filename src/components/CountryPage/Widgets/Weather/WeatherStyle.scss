@@ -4,7 +4,8 @@
 .weather {
   background-color: #9ABAF3;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
    &__icon{
     width: 50px;
     margin: 0;
