@@ -8,11 +8,13 @@ function DateTimeWidget({capital, countryCode, timezone}) {
 
   const calcTime = (offset:any) => {
     const today = new Date();
-    const utc = today.getTime() + (today.getTimezoneOffset() * 60000);
-    const nd = new Date(utc + (3600000*offset));
+    const minToToMiliSec = 60000;
+    const utc = today.getTime() + (today.getTimezoneOffset() * minToToMiliSec);
+    const hourToMiliSec = 3600000;
+    const newDate = new Date(utc + (hourToMiliSec*offset));
     const local = `en-${countryCode ? countryCode : "US"}`;
 
-    return nd.toLocaleString(local);
+    return newDate.toLocaleString(local);
 }
 
   useEffect(()=> {
