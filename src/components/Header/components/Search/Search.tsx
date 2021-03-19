@@ -7,7 +7,7 @@ import Context from "../../../Context";
 import LanguageCntext from "../../../LangContext";
 
 const Search = () => {
-  const [lang, ] = useContext(LanguageCntext);
+  const [lang] = useContext(LanguageCntext);
   const [, setContext, seachData] = useContext(Context);
   const inputEl = useRef<HTMLInputElement | null>(null);
   const buttonEl = useRef<HTMLButtonElement | null>(null);
