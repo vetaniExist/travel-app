@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import {
   YMaps,
   Map as YMap,
@@ -7,7 +7,6 @@ import {
   ZoomControl,
 } from 'react-yandex-maps';
 import "./MapStyles.scss";
-import LanguageContext from "../../LangContext";
 
 /* lang=ru_RU;
 lang=en_US;
@@ -36,8 +35,7 @@ function getAPILanguage(sysLang) {
 /* "lat": 10.66668,
   "lon": -61.51889 */
 
-function Map(props) {
-  const [lang,] = useContext(LanguageContext);
+function Map(props:any) {
   const lat = props.coord[0];
   const lon = props.coord[1];
   const mapRef = useRef();
@@ -80,9 +78,9 @@ function Map(props) {
 
   return (
     <YMaps
-      key={lang + props.coord}
+      key={props.lang + props.coord}
       query={{
-        lang: getAPILanguage(lang)
+        lang: getAPILanguage(props.lang)
       }}>
       <div>
         <YMap

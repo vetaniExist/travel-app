@@ -4,6 +4,21 @@ import Cards from "./Cards/Cards";
 import Context from "../../Context";
 import LanguageContext from "../../LangContext";
 
+const textToTranslate = {
+  EN: {
+    countryTitle: "Countries",
+    notFound: "Not Found"
+  },
+  RU: {
+    countryTitle: "Страны",
+    notFound: "Не найдено"
+  },
+  GE: {
+    countryTitle: "Land",
+    notFound: "Nicht gefunden"
+  }
+}
+
 function Countries() {
   const [context] = useContext(Context);
   const [lang, ] = useContext(LanguageContext);
@@ -11,11 +26,11 @@ function Countries() {
   return (
     <div className="countries">
       <h3 className="countries__header">
-        {lang === "EN" ? "Countries" : lang === "RU" ? "Страны" : "Land"}
+        {textToTranslate[lang].countryTitle}:
       </h3>
       <div className="countries__container">
         {/* <Cards countriesInfo={props.countriesInfo} /> */}
-        {context.length === 0 ?<h3>Not Found!</h3> : <Cards countriesInfo={context} />}
+        {context.length === 0 ?<h3>{textToTranslate[lang].notFound}!</h3> : <Cards countriesInfo={context} />}
       </div>
     </div>
   );

@@ -1,19 +1,35 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ICountry } from "../../../store.example";
-import LanguageContext from "../../LangContext";
-
 interface CountryInfoProps {
   country: ICountry;
+  lang: string;
 }
 
-function CountryInfo({ country }: CountryInfoProps) {
+const headerToTranslate = {
+  EN: {
+    capital: "Capital",
+    description: "Description",
+    loading: "Loading"
+  },
+  RU: {
+    capital: "Столица",
+    description: "Описание",
+    loading: "Загрузка"
+  },
+  GE: {
+    capital: "Hauptstadt",
+    description: "Beschreibung",
+    loading: "Beladung"
+  }
+}
+
+function CountryInfo({ country, lang }: CountryInfoProps) {
 
   if (!country) {
     return (
-      <div>Loading...</div>
+      <div>{ headerToTranslate[lang].loading }...</div>
     );
   }
-  const [lang,] = useContext(LanguageContext);
   const { name, capital, countryDescription, countryFlagImage } = country;
 
   return (
@@ -24,11 +40,11 @@ function CountryInfo({ country }: CountryInfoProps) {
           <h2 className="countryDetailsSubTitle">{name}</h2>
         </div>
         <div className='countryInfo'>
-          <h2 className="countryDetailsTitle">{lang === "EN" ? "Capital:" : lang === "RU" ? "Столица:" : "Hauptstadt:"}</h2>
+          <h2 className="countryDetailsTitle">{ headerToTranslate[lang].capital }:</h2>
           <h2 className="countryDetailsSubTitle">{capital}</h2>
         </div>
         <div className='countryDescription'>
-          <h2 className="countryDetailsTitle">{lang === "EN" ? "Description:" : lang === "RU" ? "Описание:" : "Beschreibung:"}</h2>
+          <h2 className="countryDetailsTitle">{ headerToTranslate[lang].description }:</h2>
           <p>{countryDescription}</p>
         </div>
       </div>

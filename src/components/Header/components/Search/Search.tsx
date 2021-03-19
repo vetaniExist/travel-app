@@ -6,6 +6,12 @@ import { storeExample, ICountry } from "../../../../store.example";
 import Context from "../../../Context";
 import LanguageCntext from "../../../LangContext";
 
+const textToTranslate = {
+  EN: "Seacrh",
+  RU: "Поиск",
+  GE: "Suche"
+}
+
 const Search = () => {
   const [lang] = useContext(LanguageCntext);
   const [, setContext, seachData] = useContext(Context);
@@ -65,7 +71,7 @@ const Search = () => {
         ref={inputEl}
         className='inputSearch'
         contentEditable='true'
-        placeholder={lang === "EN" ? "Seacrh" : lang === "RU" ? "Поиск" : "Suche" }
+        placeholder={textToTranslate[lang]}
         value={seach}
         onChange={updateSeach}
       />

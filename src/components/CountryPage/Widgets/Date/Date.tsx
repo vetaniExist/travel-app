@@ -1,8 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./DateStyle.scss";
+import LanguageContext from "../../../LangContext";
+
+const textToTranslate = {
+  EN: "The local time in ",
+  RU: "Локальное время в ",
+  GE: "Ortszeit in "
+}
 
 function DateTimeWidget({capital, countryCode, timezone}) {
-
+  const [lang,] = useContext(LanguageContext);
   const [dateNow, setDateNow] = useState("");
   const countryTimeZone = timezone ? timezone : "UTC+01:00";
 
@@ -12,7 +19,7 @@ function DateTimeWidget({capital, countryCode, timezone}) {
     const utc = today.getTime() + (today.getTimezoneOffset() * minToToMiliSec);
     const hourToMiliSec = 3600000;
     const newDate = new Date(utc + (hourToMiliSec*offset));
-    const local = `en-${countryCode ? countryCode : "US"}`;
+    const local = `${lang.toLocaleLowerCase()}-${countryCode ? countryCode : "US"}`;
 
     return newDate.toLocaleString(local);
 }
@@ -32,7 +39,7 @@ function DateTimeWidget({capital, countryCode, timezone}) {
   return (
     <div className="card__template date">
       <h4>
-      The local time in {capital}
+        {`${textToTranslate[lang]} ${capital}`}
       </h4>
       <span>{dateNow}</span>
     </div>
