@@ -5,7 +5,7 @@ const data = [];
 fullData.forEach((country) => {
   const dataObj = {
     name: country.name,
-    description: country.description,
+    description: country.description.en,
     nativeName: country.nativeName,
     capital: country.capital,
     flag: country.flag,
