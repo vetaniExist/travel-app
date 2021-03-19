@@ -23,7 +23,6 @@ export default function Login({ url }:{url:string}) {
 
   return (
         <form className="form" onSubmit={handleSubmit}>
-            <h3>Login</h3>
             <label htmlFor="name">Name
             </label>
             <input autoComplete="off" className="form_input" id='name' 
@@ -32,7 +31,7 @@ export default function Login({ url }:{url:string}) {
             </label>
             <input autoComplete="off" className="form_input" id="password" 
             placeholder="Password" type="password" name="password" value={user.password} onChange={handleChange} />
-            <input type="submit" value="Login" />
+            <input type="submit" value="LogIn" />
             <FormErrors formErrors={user.formErrors} />
         </form>
   );

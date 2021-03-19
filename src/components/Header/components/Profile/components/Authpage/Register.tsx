@@ -57,7 +57,6 @@ export default function Register({ url }: { url: string }) {
 
   return (
         <form className="form" onSubmit={handleSubmit}>
-            <h3>Register</h3>
             <label htmlFor="email">Email
              <input
                     autoComplete="off"
@@ -90,8 +89,8 @@ export default function Register({ url }: { url: string }) {
                     name="password"
                     value={user.password}
                     onChange={handleChange} />
-                <input type="submit" value="Login" />
             </label>
+            <input type="submit" value="SignUp" />
 
             <FormErrors formErrors={user.formErrors} />
         </form>
