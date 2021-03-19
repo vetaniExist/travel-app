@@ -8,8 +8,7 @@ import webpackHotMiddleware from "webpack-hot-middleware";// eslint-disable-line
 import config from "../../webpack.dev.config";
 
 import countriesList from "./data/countryList.json";
-import data, { en_data, ru_data, de_data } from "./data/initFullData";
-console.log(en_data)
+import data, { ru_data, de_data } from "./data/initFullData";
 
 const DIST_DIR = __dirname;
 const HTML_FILE = path.join(DIST_DIR, "index.html");
@@ -36,33 +35,29 @@ server.get("/api/countriesList", (req, res) => {
 
 server.get("/api/country", (req, res) => {
   const countryName = Object.keys(data)[0];
-  const countryData = en_data[countryName] || {};
+  const countryData = data[countryName] || {};
   res.json(countryData);
 });
 
 server.get("/api/country/:countryName", (req, res) => {
   const countryName = req.params.countryName.toLowerCase();
-  const countryData = en_data[countryName] || {};
+  const countryData = data[countryName] || {};
   res.json(countryData);
 });
 
 server.get("/api/country/:countryName/:lang", (req, res) => {
   const countryName = req.params.countryName.toLowerCase();
   const getLangData = (countryName) => {
-    switch(req.params.lang) {
+    switch (req.params.lang) {
       case "ru": {
         return ru_data[countryName];
       }
       case "de": {
         return de_data[countryName];
       }
-      case "all": {
-        return data[countryName];
-      }
-      case "en": {
-      }
+      case "en":
       default: {
-        return en_data[countryName];
+        return data[countryName];
       }
     }
   }
