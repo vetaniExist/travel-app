@@ -40,7 +40,7 @@ function App() {
           <Header />
             <Switch>
               {/* <Route path="/authorization">
-              <Authorization />
+              <AuthForm />
             </Route>*/}
             <Route path="/country/:name">
             <React.Suspense fallback={<div>Load...</div>}>
@@ -74,7 +74,7 @@ function App() {
     <Router>
       <Switch>
         {<Route path="/authorization">
-          <Authorization />
+          <AuthForm />
         </Route>}
         <Route path="/country/:id">
           <CountryPage countriesInfo={storeExample} />
