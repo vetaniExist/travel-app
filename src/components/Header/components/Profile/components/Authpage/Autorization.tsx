@@ -1,5 +1,4 @@
 import React from "react";
-import { Interface } from "readline";
 import Login from "./Login";
 import Register from "./Register";
 

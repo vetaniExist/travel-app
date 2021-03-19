@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, ButtonGroup } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import profileIcon from "../../../../../../assets/icons/user_default_logo.svg";
+import Autorization from "../Authpage/Autorization";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -19,6 +20,7 @@ const ProfileItem = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
   const handleChangeOpenMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -35,6 +37,7 @@ const ProfileItem = () => {
   };
 
   const handleChangeOpenSignUp = () => {
+    setIsRegistrationOpen(true);
     setIsMenuOpen(false);
   };
 
@@ -77,6 +80,7 @@ const ProfileItem = () => {
             <img src={profileIcon} alt="user-logo"/>
             <div className="userName">Julia</div>
           </div>
+          <Autorization login={isLogin} register={isRegistrationOpen}/>
       </div>
   );
 };
