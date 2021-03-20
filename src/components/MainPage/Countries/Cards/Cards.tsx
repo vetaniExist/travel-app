@@ -5,7 +5,6 @@ import { ICountry } from "../../../../store.example";
 // import heartRed from '../assets/heartred.svg';
 import heartWhite from "../../../../assets/heartwhite.svg";
 import place from "../../../../assets/place.svg";
-import toTranslate from "../../../Translate";
 
 interface CardsProps {
   countriesInfo: ICountry[];
@@ -19,7 +18,7 @@ const Cards = ({ countriesInfo, lang }: CardsProps) => (
         <Link to={`/country/${country.name}`} key={country.name+country.id} className="card__link">
           <div className="card card__template">
             <header className="card__header">
-              <span>{toTranslate(country.capital, lang)}</span>
+              <span>{country.capital}</span>
               <div className="card__header_favorites">
                 <span>Likes</span>
                 <img className="card__icon" src={heartWhite} alt="" />
@@ -27,7 +26,7 @@ const Cards = ({ countriesInfo, lang }: CardsProps) => (
             </header>
             <footer className="card__footer">
               <img className="card__icon place" src={place} alt=""/>
-              <span>{toTranslate(country.name, lang)}</span>
+              <span>{country.name}</span>
             </footer>
           </div>
         </Link>

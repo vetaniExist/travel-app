@@ -6,7 +6,6 @@ import Map from "./Map/Map";
 import Widgets from "./Widgets/Widgets";
 import Video from "./Video/Video";
 import { ICountry } from "../../store.example";
-import toTranslate from "../Translate";
 
 interface CardsProps {
   countriesInfo: ICountry[];
@@ -59,9 +58,9 @@ function CountryPage({ countriesInfo, lang }: CardsProps) {
           iso={country.iso}
         />
         {country.currencyCode && <Widgets
-          capital={toTranslate(country.capital, lang)}
+          capital={country.capital}
           currencyCode={country.currencyCode}
-          currencyName={toTranslate(country.currencyName, lang)}
+          currencyName={country.currencyName}
           currencySymbol={country.currencySymbol}
           timezone={country.timezone}
           countryCode={country.iso}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
-import toTranslate from "../Translate";
 
 interface SliderInfo {
   country: any,
@@ -13,9 +12,9 @@ const Slider = ({country, isMainPage, lang}: SliderInfo) => {
   if (isMainPage) {
     listOfImages = country.map((country:any) => {
       return {
-        original: toTranslate(country.countryImage, lang),
-        originalAlt: toTranslate(country.name, lang),
-        description:  toTranslate(country.name, lang)
+        original: country.countryImage,
+        originalAlt: country.name,
+        description:  country.name,
       }
     });
   } else {
@@ -24,9 +23,9 @@ const Slider = ({country, isMainPage, lang}: SliderInfo) => {
         return {
           original: sight.image,
           thumbnail: sight.preview.source ? sight.preview.source : sight.image,
-          thumbnailTitle: toTranslate(sight.name, lang),
-          originalAlt: toTranslate(sight.name, lang),
-          description: `${toTranslate(sight.name, lang)} - ${toTranslate(sight.description[0]["en"], lang)}`,
+          thumbnailTitle: sight.name,
+          originalAlt: sight.name,
+          description: `${sight.name} - ${sight.description[0]["en"]}`,
         }
       });
     }
