@@ -73,26 +73,4 @@ function App() {
   );
 }
 
-/* const App = (): JSX.Element => (
-  <>
-    <Header />
-
-    <Router>
-      <Switch>
-        {<Route path="/authorization">
-          <AuthForm />
-        </Route>}
-        <Route path="/country/:id">
-          <CountryPage countriesInfo={storeExample} />
-        </Route>
-        <Route path="/">
-          <MainPage />
-        </Route>
-      </Switch>
-    </Router>
-
-    <Footer />
-  </>
-);
- */
 export default App;

@@ -1,6 +1,8 @@
 import fullData from "./fullData.json";
 
-const data = [];
+export const en_data = [];
+export const ru_data = [];
+export const de_data = [];
 
 fullData.forEach((country) => {
   const dataObj = {
@@ -19,7 +21,14 @@ fullData.forEach((country) => {
     timezones: country.timezones,
 
   };
-  data[country.name.toLowerCase()] = dataObj;
+
+  en_data[country.name.toLowerCase()] = { ...dataObj };
+  ru_data[country.name.toLowerCase()] = { ...dataObj };
+  de_data[country.name.toLowerCase()] = { ...dataObj };
+
+  en_data[country.name.toLowerCase()].description = en_data[country.name.toLowerCase()].description.en;
+  ru_data[country.name.toLowerCase()].description = ru_data[country.name.toLowerCase()].description.ru;
+  de_data[country.name.toLowerCase()].description = de_data[country.name.toLowerCase()].description.de;
 });
 
-export default data;
+export default en_data;
