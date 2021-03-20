@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Weather from "./Weather/Weather";
 import Date from "./Date/Date";
 import Currency from "./Currency/Currency";
-import "./WidgetsStyle.scss"
+import "./WidgetsStyle.scss";
 
-function Widgets({capital, currencyCode, currencyName, currencySymbol, countryCode, timezone}) {
-  const [weather, setWeather] = useState('');
-  const [currencyRates, setCurrencyRates] = useState('');
+function Widgets({
+  capital, currencyCode, currencyName, currencySymbol, countryCode, timezone,
+}) {
+  const [weather, setWeather] = useState("");
+  const [currencyRates, setCurrencyRates] = useState("");
 
-  useEffect(() =>{
+  useEffect(() => {
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&lang=en&appid=22d4766f7d2759a9e613e180a9efc542&units=metric`;
 
     fetch(weatherUrl)
-      .then(res => res.json())
-      .then(weatherJson => {
+      .then((res) => res.json())
+      .then((weatherJson) => {
         const weather = {
           name: weatherJson.name,
           mainWeather: weatherJson.weather[0].main,
@@ -25,18 +27,16 @@ function Widgets({capital, currencyCode, currencyName, currencySymbol, countryCo
 
         setWeather(weather);
       });
-
-
   }, []);
 
-  const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
+  const iconUrl = `http://openweathermap.org/img/w/${weather.icon}.png`;
 
   useEffect(() => {
     const currencyUrl = `https://v6.exchangerate-api.com/v6/a9ef46a9e2b66f8e834cd9e8/latest/${currencyCode}`;
 
     fetch(currencyUrl)
-      .then(res => res.json())
-      .then(currencyJson => {
+      .then((res) => res.json())
+      .then((currencyJson) => {
         const currencyRates = {
           EUR: currencyJson.conversion_rates.EUR,
           USD: currencyJson.conversion_rates.USD,
@@ -47,7 +47,6 @@ function Widgets({capital, currencyCode, currencyName, currencySymbol, countryCo
 
         setCurrencyRates(currencyRates);
       });
-
   }, []);
 
   return (

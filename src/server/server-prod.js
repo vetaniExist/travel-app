@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 
 import countriesList from "./data/countryList.json";
-import data from "./data/initFullData";
+import data, { ru_data, de_data } from "./data/initFullData";
 
 const DIST_DIR = __dirname;
 const HTML_FILE = path.join(DIST_DIR, "index.html");
@@ -29,6 +29,26 @@ server.get("/api/country", (req, res) => {
 server.get("/api/country/:countryName", (req, res) => {
   const countryName = req.params.countryName.toLowerCase();
   const countryData = data[countryName] || {};
+  res.json(countryData);
+});
+
+server.get("/api/country/:countryName/:lang", (req, res) => {
+  const countryName = req.params.countryName.toLowerCase();
+  const getLangData = (countryName) => {
+    switch (req.params.lang) {
+      case "ru": {
+        return ru_data[countryName];
+      }
+      case "de": {
+        return de_data[countryName];
+      }
+      case "en":
+      default: {
+        return data[countryName];
+      }
+    }
+  };
+  const countryData = getLangData(countryName) || {};
   res.json(countryData);
 });
 

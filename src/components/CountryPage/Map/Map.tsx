@@ -5,7 +5,7 @@ import {
   Placemark,
   FullscreenControl,
   ZoomControl,
-} from 'react-yandex-maps';
+} from "react-yandex-maps";
 import "./MapStyles.scss";
 
 /* lang=ru_RU;
@@ -41,17 +41,17 @@ function Map(props:any) {
   const mapRef = useRef();
 
   // https://github.com/gribnoysup/react-yandex-maps/issues/186
-  const getRegions = ymaps => {
+  const getRegions = (ymaps) => {
     if (mapRef && mapRef.current) {
       const objectManager = new ymaps.ObjectManager();
-      ymaps.borders.load('001').then(function (result) {
-        const regions = result.features.reduce(function (acc, feature) {
+      ymaps.borders.load("001").then((result) => {
+        const regions = result.features.reduce((acc, feature) => {
           const iso = feature.properties.iso3166;
           feature.id = iso;
           feature.options = {
             fillOpacity: 0.3,
             strokeColor: "#AAA",
-            strokeOpacity: 1
+            strokeOpacity: 1,
           };
 
           acc[iso] = feature;
@@ -65,7 +65,7 @@ function Map(props:any) {
         paint(regions[props.iso]);
 
         result.features = [];
-        for (let reg in regions) {
+        for (const reg in regions) {
           result.features.push(regions[reg]);
         }
 
@@ -74,7 +74,6 @@ function Map(props:any) {
       });
     }
   };
-
 
   return (
     <YMaps
@@ -91,7 +90,7 @@ function Map(props:any) {
           }}
           width={"100%"}
           height={"600px"}
-          onLoad={ymaps => getRegions(ymaps)}
+          onLoad={(ymaps) => getRegions(ymaps)}
           options={{
             minZoom: 2,
             maxZoom: 10,
@@ -100,11 +99,11 @@ function Map(props:any) {
         >
           <Placemark geometry={[lat, lon]} />
           <FullscreenControl />
-          <ZoomControl options={{ float: 'right' }} />
+          <ZoomControl options={{ float: "right" }} />
         </YMap>
       </div>
     </YMaps >
-  )
+  );
 }
 
 export default Map;

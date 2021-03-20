@@ -1,8 +1,10 @@
 import React from "react";
 import "./CurrencyStyle.scss";
 
-function Currency({currencyRates, currencyName, currencySymbol}) {
-  const { EUR, USD, RUB, BYN, UAH } = currencyRates;
+function Currency({ currencyRates, currencyName, currencySymbol }) {
+  const {
+    EUR, USD, RUB, BYN, UAH,
+  } = currencyRates;
 
   return (
     <div className="card__template card__template_widget currency">

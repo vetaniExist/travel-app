@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./CardsStyle.scss";
 import { ICountry } from "../../../../store.example";
-// import heartRed from '../assets/heartred.svg';
-import heartWhite from "../../../../assets/heartwhite.svg";
-import place from "../../../../assets/place.svg";
+
+import Card from "./Card";
 
 interface CardsProps {
   countriesInfo: ICountry[];
@@ -14,26 +13,13 @@ interface CardsProps {
 const Cards = ({ countriesInfo, lang }: CardsProps) => (
     <>
       {countriesInfo.map((country: any) => (
-
-        <Link to={`/country/${country.name}`} key={country.name+country.id} className="card__link">
-          <div className="card card__template">
-            <header className="card__header">
-              <span>{country.capital}</span>
-              <div className="card__header_favorites">
-                <span>Likes</span>
-                <img className="card__icon" src={heartWhite} alt="" />
-              </div>
-            </header>
-            <footer className="card__footer">
-              <img className="card__icon place" src={place} alt=""/>
-              <span>{country.name}</span>
-            </footer>
-          </div>
+        <Link to={`/country/${country.name}`} key={country.name + country.id} className="card__link">
+          <Card country={country}></Card>
         </Link>
-
       ))
       }
     </>
-);
+  );
+}
 
 export default Cards;

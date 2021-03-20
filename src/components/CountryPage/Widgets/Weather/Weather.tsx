@@ -23,7 +23,6 @@ const textToTranslate = {
 function Weather({weather, iconUrl, capital}) {
   const [lang,] = useContext(LanguageContext);
   const { mainWeather, temperature, description, humidity } = weather;
-
   return (
     <div className="card__template card__template_widget weather">
         <h4>

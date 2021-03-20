@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     fetch("https://travel-app-v.herokuapp.com/api/countriesList", {
-      mode: 'cors',
+      mode: "cors",
     })
       .then((data) => data.json())
       .then((dataJson) => {
@@ -39,11 +39,16 @@ function App() {
       <Context.Provider value={[data, setData, seachData]}>
         <LanguageContext.Provider value={[language, setLanguage]}>
         <Router>
+
           <Header />
-            <Switch>
-              {/* <Route path="/authorization">
-              <Authorization />
-            </Route>*/}
+
+          {/* <ProfilePage/> */}
+
+          <Switch>
+            {/* <Route path="/authorization">
+              <AuthForm />
+            </Route> */}
+
             <Route path="/country/:name">
             <React.Suspense fallback={<div>Load...</div>}>
               <CountryPage
@@ -53,10 +58,10 @@ function App() {
               </React.Suspense>
             </Route>
             <Route path="/">
-            <React.Suspense fallback={<div>Load...</div>}>
-              <MainPage
-                countriesInfo={data}
-              />
+              <React.Suspense fallback={<div>Load...</div>}>
+                <MainPage
+                  countriesInfo={data}
+                />
               </React.Suspense>
             </Route>
           </Switch>
@@ -69,26 +74,4 @@ function App() {
   );
 }
 
-/* const App = (): JSX.Element => (
-  <>
-    <Header />
-
-    <Router>
-      <Switch>
-        {<Route path="/authorization">
-          <Authorization />
-        </Route>}
-        <Route path="/country/:id">
-          <CountryPage countriesInfo={storeExample} />
-        </Route>
-        <Route path="/">
-          <MainPage />
-        </Route>
-      </Switch>
-    </Router>
-
-    <Footer />
-  </>
-);
- */
 export default App;

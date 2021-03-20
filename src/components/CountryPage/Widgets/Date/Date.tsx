@@ -11,7 +11,7 @@ const textToTranslate = {
 function DateTimeWidget({capital, countryCode, timezone}) {
   const [lang,] = useContext(LanguageContext);
   const [dateNow, setDateNow] = useState("");
-  const countryTimeZone = timezone ? timezone : "UTC+01:00";
+  const countryTimeZone = timezone || "UTC+01:00";
 
   const calcTime = (offset:any) => {
     const today = new Date();
@@ -24,14 +24,14 @@ function DateTimeWidget({capital, countryCode, timezone}) {
     return newDate.toLocaleString(local);
 }
 
-  useEffect(()=> {
-      const zones = countryTimeZone.toString().split("UTC")[1].split(":");
-      const hoursZone = zones[0];
-      const minutesZone = zones[1];
+  useEffect(() => {
+    const zones = countryTimeZone.toString().split("UTC")[1].split(":");
+    const hoursZone = zones[0];
+    const minutesZone = zones[1];
 
-      let timer = setTimeout(()=>{
-        setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
-      }, 1000);
+    const timer = setTimeout(() => {
+      setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
+    }, 1000);
 
     return () => clearTimeout(timer);
   });

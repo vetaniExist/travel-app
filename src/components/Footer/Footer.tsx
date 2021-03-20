@@ -23,7 +23,7 @@ function Footer() {
         </a>
       </div>
       <a href="https://rs.school/js/">
-        <img className="footer__icon" src={logoRSS} alt="" />
+        <img className="footer__icon footer__icon_rsschool" src={logoRSS} alt="" />
       </a>
     </div>
   );
