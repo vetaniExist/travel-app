@@ -16,7 +16,7 @@ const headerToTranslate = {
     description: "Описание",
     loading: "Загрузка"
   },
-  GE: {
+  DE: {
     capital: "Hauptstadt",
     description: "Beschreibung",
     loading: "Beladung"

@@ -9,7 +9,7 @@ import LanguageCntext from "../../../LangContext";
 const textToTranslate = {
   EN: "Seacrh",
   RU: "Поиск",
-  GE: "Suche"
+  DE: "Suche"
 }
 
 const Search = () => {

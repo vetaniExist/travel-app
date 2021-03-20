@@ -9,7 +9,6 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { storeExample } from "../store.example";
 import Context from "./Context";
-import LandContext from "./LangContext";
 import LanguageContext from "./LangContext";
 
 const CountryPage = React.lazy(() => import("./CountryPage/CountryPage"));

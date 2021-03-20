@@ -13,7 +13,7 @@ const textToTranslate = {
     countryTitle: "Страны",
     notFound: "Не найдено"
   },
-  GE: {
+  DE: {
     countryTitle: "Land",
     notFound: "Nicht gefunden"
   }
@@ -30,7 +30,7 @@ function Countries() {
       </h3>
       <div className="countries__container">
         {/* <Cards countriesInfo={props.countriesInfo} /> */}
-        {context.length === 0 ?<h3>{textToTranslate[lang].notFound}!</h3> : <Cards countriesInfo={context} />}
+        {context.length === 0 ?<h3>{textToTranslate[lang].notFound}!</h3> : <Cards countriesInfo={context} lang={lang}/>}
       </div>
     </div>
   );

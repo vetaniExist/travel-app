@@ -5,7 +5,7 @@ import LanguageContext from "../../../LangContext";
 const textToTranslate = {
   EN: "The local time in ",
   RU: "Локальное время в ",
-  GE: "Ortszeit in "
+  DE: "Ortszeit in "
 }
 
 function DateTimeWidget({capital, countryCode, timezone}) {

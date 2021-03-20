@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
-
-const lang = 'en';
+import toTranslate from "../Translate";
 
 interface SliderInfo {
   country: any,
-  isMainPage: boolean
+  isMainPage: boolean,
+  lang: string
 }
 
-const Slider = ({country, isMainPage}: SliderInfo) => {
+const Slider = ({country, isMainPage, lang}: SliderInfo) => {
   let listOfImages:any = [];
   if (isMainPage) {
     listOfImages = country.map((country:any) => {
       return {
-        original: country.countryImage,
-        originalAlt: country.name,
-        description: country.name
+        original: toTranslate(country.countryImage, lang),
+        originalAlt: toTranslate(country.name, lang),
+        description:  toTranslate(country.name, lang)
       }
     });
   } else {
@@ -24,9 +24,9 @@ const Slider = ({country, isMainPage}: SliderInfo) => {
         return {
           original: sight.image,
           thumbnail: sight.preview.source ? sight.preview.source : sight.image,
-          thumbnailTitle: sight.name,
-          originalAlt: sight.name,
-          description: `${sight.name} - ${sight.description[0][lang]}`,
+          thumbnailTitle: toTranslate(sight.name, lang),
+          originalAlt: toTranslate(sight.name, lang),
+          description: `${toTranslate(sight.name, lang)} - ${toTranslate(sight.description[0]["en"], lang)}`,
         }
       });
     }

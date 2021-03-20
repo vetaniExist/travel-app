@@ -6,6 +6,7 @@ import Map from "./Map/Map";
 import Widgets from "./Widgets/Widgets";
 import Video from "./Video/Video";
 import { ICountry } from "../../store.example";
+import toTranslate from "../Translate";
 
 interface CardsProps {
   countriesInfo: ICountry[];
@@ -22,8 +23,7 @@ function CountryPage({ countriesInfo, lang }: CardsProps) {
 
   
   useEffect(() => {
-    const langName = lang === 'GE' ?  "de" : lang.toLowerCase();
-    fetch("https://travel-app-v.herokuapp.com/api/country/" + name + "/" + langName, {
+    fetch("https://travel-app-v.herokuapp.com/api/country/" + name + "/" + lang.toLowerCase(), {
       mode: 'cors',
     })
       .then((data) => data.json())
@@ -50,7 +50,7 @@ function CountryPage({ countriesInfo, lang }: CardsProps) {
 
   return (
     <div className="countryPage">
-      <Slider country={country} isMainPage={false} />
+      <Slider country={country} isMainPage={false} lang={lang} />
       <div className="wrapper">
         <CountryInfo country={country} lang={lang} />
         <Map
@@ -59,16 +59,15 @@ function CountryPage({ countriesInfo, lang }: CardsProps) {
           iso={country.iso}
         />
         {country.currencyCode && <Widgets
-          capital={country.capital}
+          capital={toTranslate(country.capital, lang)}
           currencyCode={country.currencyCode}
-          currencyName={country.currencyName}
+          currencyName={toTranslate(country.currencyName, lang)}
           currencySymbol={country.currencySymbol}
           timezone={country.timezone}
           countryCode={country.iso}
           lang={lang}
         />}
        <Video videoId={country.videoId}/>
-       
       </div>
     </div>
   );

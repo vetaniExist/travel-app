@@ -4,7 +4,7 @@ import LanguageCntext from "../../../../../LangContext";
 const LANGUAGES = {    
   en: "EN",
   ru: "RU",
-  de: "GE"
+  de: "DE"
 }
 
 const LanguageSelect = () => {

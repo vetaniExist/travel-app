@@ -1,20 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./WeatherStyle.scss"
 import LanguageContext from "../../../LangContext";
+import toTranslate from "../../../Translate";
 
 const textToTranslate = {
   EN: {
-    in: "in",
+    in: " in",
     temperature: "Temperature",
     humidity: "Humidity"
   },
   RU: {
-    in: "в",
+    in: " в",
     temperature: "Температура",
     humidity: "Влажность"
   },
-  GE: {
-    in: "in",
+  DE: {
+    in: " in",
     temperature: "Temperatur",
     humidity: "Feuchtigkeit"
   }
@@ -23,16 +24,27 @@ const textToTranslate = {
 function Weather({weather, iconUrl, capital}) {
   const [lang,] = useContext(LanguageContext);
   const { mainWeather, temperature, description, humidity } = weather;
+  const [mainWeatherTranslate, setMainWeatherTranslate] = useState(mainWeather);
+  const [descriptionTranslate, setDescriptionTranslate] = useState(description);
+  
+  useEffect(()=> {
+    console.log(toTranslate(mainWeather, lang));
+    setMainWeatherTranslate(toTranslate(mainWeather, lang));
+    setDescriptionTranslate(toTranslate(description, lang))
+  })
 
   return (
     <div className="card__template card__template_widget weather">
         <h4>
-          {mainWeather} {textToTranslate[lang].in} {capital}
+          {mainWeatherTranslate}
+          {textToTranslate[lang].in} {capital}
           <img src={iconUrl} alt={description} className="weather__icon" />
         </h4>
         <div className="widgetTextItem">{textToTranslate[lang].temperature}: {temperature}°C</div>
         <div className="widgetTextItem">{textToTranslate[lang].humidity}: {humidity}%</div>
-        <div className="widgetTextItem">{description}</div>
+        <div className="widgetTextItem">
+          {descriptionTranslate}
+        </div>
     </div>
   );
 }
