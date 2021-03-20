@@ -9,6 +9,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { storeExample } from "../store.example";
 import Context from "./Context";
+import ProfilePage from "./ProfilePage/ProfilePage";
 
 const CountryPage = React.lazy(() => import("./CountryPage/CountryPage"));
 const MainPage = React.lazy(() => import("./MainPage/MainPage"));
@@ -37,11 +38,16 @@ function App() {
     <>
       <Context.Provider value={[data, setData, seachData]}>
         <Router>
+
           <Header />
+
+          {/*<ProfilePage/>*/}
+
             <Switch>
               {/* <Route path="/authorization">
               <AuthForm />
             </Route>*/}
+
             <Route path="/country/:name">
             <React.Suspense fallback={<div>Load...</div>}>
               <CountryPage

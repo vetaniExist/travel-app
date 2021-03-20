@@ -5,6 +5,12 @@ function Statistics() {
   return (
     <div>
      Statistics
+      Statistics
+      Statistics
+      Statistics
+      Statistics
+      Statistics
+      Statistics
 
     </div>
   )

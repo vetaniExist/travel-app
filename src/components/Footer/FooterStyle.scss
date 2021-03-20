@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px 2px;
-  background-color: $main-color;
+  background-color: rgba(76, 80, 82, 0.51);
   font-size: 16px;
   font-weight: bold;
   color:$light-font-color;
@@ -23,5 +23,10 @@
   }
   &__icon_git {
     width: 20px;
+  }
+  &__icon_rsschool {
+    background-color: rgba(255, 255, 255, 0.21);
+    padding: 5px;
+    border-radius: 5px;
   }
 }

@@ -1,0 +1,45 @@
+@import "../../../common/constants";
+
+.rating {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 145px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 0, 0.51);
+  background-color: rgba(30, 85, 132, 0.35);
+  color: #fff;
+  z-index: 10;
+  &__icon {
+    width: 16px;
+    margin-right: 5px;
+  }
+  & select {
+    background-color: $grey-font-color;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    //appearance: button;
+    outline: none;
+  }
+
+  & select option {
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .rating {
+    top: 57px;
+    right: 10px;
+    width: 130px;
+  }
+}
