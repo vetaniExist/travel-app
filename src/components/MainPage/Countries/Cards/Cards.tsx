@@ -7,19 +7,18 @@ import Card from "./Card";
 
 interface CardsProps {
   countriesInfo: ICountry[];
+  lang: string;
 }
 
-function Cards({ countriesInfo }: CardsProps) {
-  return (
-    <>
-      {countriesInfo.map((country: any) => (
-        <Link to={`/country/${country.name}`} key={country.name + country.id} className="card__link">
-          <Card country={country}></Card>
-        </Link>
-      ))
-      }
-    </>
-  );
-}
+const Cards = ({ countriesInfo, lang }: CardsProps) => (
+  <>
+    {countriesInfo.map((country: any) => (
+      <Link to={`/country/${country.name}`} key={country.name + country.id} className="card__link">
+        <Card country={country}></Card>
+      </Link>
+    ))
+    }
+  </>
+);
 
 export default Cards;

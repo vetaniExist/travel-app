@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import Rating from "./Rating/Rating";
 
-const lang = "en";
-
 interface SliderInfo {
   country: any,
-  isMainPage: boolean
+  isMainPage: boolean,
+  lang: string
 }
 
-const Slider = ({ country, isMainPage }: SliderInfo) => {
+const Slider = ({ country, isMainPage, lang }: SliderInfo) => {
   const [selectedImage, setSelectedImage] = useState(0);
   let listOfImages:any = [];
   if (isMainPage) {

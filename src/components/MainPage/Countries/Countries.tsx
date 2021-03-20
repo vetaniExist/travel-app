@@ -2,18 +2,22 @@ import React, { useContext } from "react";
 import "./CountriesStyle.scss";
 import Cards from "./Cards/Cards";
 import Context from "../../Context";
+import LanguageContext from "../../LangContext";
+import textToTranslate from "./textToTranslate";
+
 
 function Countries() {
   const [context] = useContext(Context);
+  const [lang,] = useContext(LanguageContext);
+
   return (
     <div className="countries">
       <h3 className="countries__header">
-        Countries
+        {(textToTranslate[lang] && textToTranslate[lang].countryTitle) || ""}:
       </h3>
       <div className="countries__container">
         {/* <Cards countriesInfo={props.countriesInfo} /> */}
-        {context.length === 0 ? <h3>Not Found!</h3> : <Cards countriesInfo={context} />}
-
+        {context.length === 0 ? <h3>{textToTranslate[lang].notFound}!</h3> : <Cards countriesInfo={context} lang={lang} />}
       </div>
     </div>
   );
