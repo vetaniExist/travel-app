@@ -47,7 +47,7 @@ server.get("/api/country/:countryName/:lang", (req, res) => {
         return data[countryName];
       }
     }
-  }
+  };
   const countryData = getLangData(countryName) || {};
   res.json(countryData);
 });

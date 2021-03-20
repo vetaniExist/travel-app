@@ -25,11 +25,11 @@ export default function Login({ url }:{url:string}) {
         <form className="form" onSubmit={handleSubmit}>
             <label htmlFor="name">Name
             </label>
-            <input autoComplete="off" className="form_input" id='name' 
+            <input autoComplete="off" className="form_input" id='name'
             placeholder="Username" name="name" type="text" value={user.name} onChange={handleChange} />
             <label htmlFor="password"> Password
             </label>
-            <input autoComplete="off" className="form_input" id="password" 
+            <input autoComplete="off" className="form_input" id="password"
             placeholder="Password" type="password" name="password" value={user.password} onChange={handleChange} />
             <input type="submit" value="LogIn" />
             <FormErrors formErrors={user.formErrors} />

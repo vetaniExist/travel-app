@@ -12,8 +12,8 @@ function Countries() {
       </h3>
       <div className="countries__container">
         {/* <Cards countriesInfo={props.countriesInfo} /> */}
-        {context.length === 0 ?<h3>Not Found!</h3> : <Cards countriesInfo={context} />}
-        
+        {context.length === 0 ? <h3>Not Found!</h3> : <Cards countriesInfo={context} />}
+
       </div>
     </div>
   );

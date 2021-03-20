@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./RatingStyles.scss";
 import star from "../../../assets/star.svg";
 
-function Rating({sightName}: any) {
-  const [rating, setRating] = useState('0');
+function Rating({ sightName }: any) {
+  const [rating, setRating] = useState("0");
 
   useEffect(() => {
-    setRating(localStorage.getItem(sightName) || '0');
+    setRating(localStorage.getItem(sightName) || "0");
   }, [sightName]);
 
   function handleChange(e: any) {

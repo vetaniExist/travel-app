@@ -1,28 +1,27 @@
 import React, { useState, useEffect } from "react";
 import "./DateStyle.scss";
 
-function DateTimeWidget({capital, countryCode, timezone}) {
-
+function DateTimeWidget({ capital, countryCode, timezone }) {
   const [dateNow, setDateNow] = useState("");
-  const countryTimeZone = timezone ? timezone : "UTC+01:00";
+  const countryTimeZone = timezone || "UTC+01:00";
 
   const calcTime = (offset:any) => {
     const today = new Date();
     const utc = today.getTime() + (today.getTimezoneOffset() * 60000);
-    const nd = new Date(utc + (3600000*offset));
-    const local = `en-${countryCode ? countryCode : "US"}`;
+    const nd = new Date(utc + (3600000 * offset));
+    const local = `en-${countryCode || "US"}`;
 
     return nd.toLocaleString(local);
-}
+  };
 
-  useEffect(()=> {
-      const zones = countryTimeZone.toString().split("UTC")[1].split(":");
-      const hoursZone = zones[0];
-      const minutesZone = zones[1];
+  useEffect(() => {
+    const zones = countryTimeZone.toString().split("UTC")[1].split(":");
+    const hoursZone = zones[0];
+    const minutesZone = zones[1];
 
-      let timer = setTimeout(()=>{
-        setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
-      }, 1000);
+    const timer = setTimeout(() => {
+      setDateNow(calcTime(`${hoursZone}.${minutesZone}`));
+    }, 1000);
 
     return () => clearTimeout(timer);
   });

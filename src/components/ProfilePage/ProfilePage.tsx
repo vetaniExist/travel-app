@@ -13,7 +13,7 @@ function ProfilePage() {
         <Statistics/>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProfilePage
+export default ProfilePage;
