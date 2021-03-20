@@ -18,10 +18,10 @@ const Cards = ({ countriesInfo }: CardsProps) => (
           <div className="card card__template">
             <header className="card__header">
               <span>{country.capital}</span>
-              <div className="card__header_favorites">
+              {/*<div className="card__header_favorites">
                 <span>Likes</span>
                 <img className="card__icon" src={heartWhite} alt="" />
-              </div>
+              </div>*/}
             </header>
             <footer className="card__footer">
               <img className="card__icon place" src={place} alt=""/>

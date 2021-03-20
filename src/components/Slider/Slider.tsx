@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ImageGallery from "react-image-gallery";
+import Rating from "./Rating/Rating";
 
 const lang = 'en';
 
@@ -9,6 +10,7 @@ interface SliderInfo {
 }
 
 const Slider = ({country, isMainPage}: SliderInfo) => {
+  const [selectedImage, setSelectedImage] = useState(0);
   let listOfImages:any = [];
   if (isMainPage) {
     listOfImages = country.map((country:any) => {
@@ -33,9 +35,25 @@ const Slider = ({country, isMainPage}: SliderInfo) => {
     
   }
 
+  const showIndex = (idx: any) => {
+    setSelectedImage(idx);
+  };
+
   return (
       <div className='sliderContainer'>
-        {listOfImages.length !== 0 ? isMainPage ? <ImageGallery items={listOfImages} showThumbnails={false} autoPlay={true} lazyLoad={true} /> : <ImageGallery items={listOfImages} showThumbnails={true} autoPlay={true} lazyLoad={true} /> : null}
+        {!isMainPage && listOfImages.length && <Rating sightName={listOfImages[selectedImage].originalAlt} />}
+        {listOfImages.length !== 0 ? isMainPage
+          ? <ImageGallery items={listOfImages}
+                          showThumbnails={false}
+                          autoPlay={true}
+                          lazyLoad={true}
+                          slideInterval="7000"/>
+          : <ImageGallery items={listOfImages}
+                          showThumbnails={true}
+                          autoPlay={true}
+                          lazyLoad={true}
+                          slideInterval="7000"
+                          onSlide={showIndex}/> : null}
       </div>
   );
 };
