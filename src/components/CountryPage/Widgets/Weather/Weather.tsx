@@ -1,9 +1,10 @@
 import React from "react";
-import "./WeatherStyle.scss"
+import "./WeatherStyle.scss";
 
-function Weather({weather, iconUrl, capital}) {
-
-  const { mainWeather, temperature, description, humidity } = weather;
+function Weather({ weather, iconUrl, capital }) {
+  const {
+    mainWeather, temperature, description, humidity,
+  } = weather;
 
   return (
     <div className="card__template card__template_widget weather">

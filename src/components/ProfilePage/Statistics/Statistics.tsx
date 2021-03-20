@@ -13,7 +13,7 @@ function Statistics() {
       Statistics
 
     </div>
-  )
+  );
 }
 
-export default Statistics
+export default Statistics;
