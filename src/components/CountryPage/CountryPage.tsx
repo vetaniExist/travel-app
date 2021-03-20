@@ -6,24 +6,24 @@ import Map from "./Map/Map";
 import Widgets from "./Widgets/Widgets";
 import Video from "./Video/Video";
 import { ICountry } from "../../store.example";
-import LanguageContext from "../LangContext";
 
 interface CardsProps {
   countriesInfo: ICountry[];
+  lang: string;
 }
 interface ParamTypes {
   name: string;
 }
 
-function CountryPage({ countriesInfo }: CardsProps) {
-  const [lang,] = useContext(LanguageContext);
+function CountryPage({ countriesInfo, lang }: CardsProps) {
   const { name } = useParams<ParamTypes>();
   const [countryCapitalCoord, setCoord] = useState([-21.13938, -175.2018]);
   const [country, setCountry] = useState(countriesInfo.find(item => item.name === name) || countriesInfo[0]);
 
   
   useEffect(() => {
-    fetch("https://travel-app-v.herokuapp.com/api/country/" + name, {
+    const langName = lang === 'GE' ?  "de" : lang.toLowerCase();
+    fetch("https://travel-app-v.herokuapp.com/api/country/" + name + "/" + langName, {
       mode: 'cors',
     })
       .then((data) => data.json())
@@ -44,10 +44,9 @@ function CountryPage({ countriesInfo }: CardsProps) {
           alpha2Code: dataJson.alpha2Code,
           timezone: dataJson.timezones[0]
         }
-
         setCountry(country);
       });
-  }, []);
+  }, [lang]);
 
   return (
     <div className="countryPage">

@@ -49,7 +49,7 @@ function App() {
             <React.Suspense fallback={<div>Load...</div>}>
               <CountryPage
                 countriesInfo={data}
-                language={language}
+                lang={language}
               />
               </React.Suspense>
             </Route>
