@@ -1,0 +1,152 @@
+[
+    {
+        "name": "Australia",
+        "capital": "Canberra",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=63e673b84ebee43c1714dfbff3fc1d54&ref=rim&n=33&w=333&h=188",
+        "videoId": "PdVLk_dPmtc"
+    },
+    {
+        "name": "Bermuda",
+        "capital": "Hamilton",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=e42e206a10d485c3e1dec159a71e33d1&ref=rim&n=33&w=282&h=188",
+        "videoId": "J7DWwuo-XY8"
+    },
+    {
+        "name": "Cambodia",
+        "capital": "Phnom Penh",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=e63bb8f8fbbe7a1ef348fb0014e9ed7e&ref=rim&n=33&w=281&h=188",
+        "videoId": "W3DGxLC8kk8"
+    },
+    {
+        "name": "Costa Rica",
+        "capital": "San Jose",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=de6f6f658854e62c9ffd88a8dcf9cc0b&ref=rim&n=33&w=323&h=188",
+        "videoId": "EotbKqZmBuY"
+    },
+    {
+        "name": "Cuba",
+        "capital": "Havana",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=3c311286f836de53e6858149875db9c1&ref=rim&n=33&w=285&h=188",
+        "videoId": "N4ZMYokojGw"
+    },
+    {
+        "name": "Cyprus",
+        "capital": "Nicosia",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=849d5e60446bf0b836070d1262a82675&ref=rim&n=33&w=281&h=188",
+        "videoId": "YMZ1oNylJ4A"
+    },
+    {
+        "name": "Dominican Republic",
+        "capital": "Santo Domingo",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=3ab7938e7e3b877cdfaa502852b0f133&ref=rim&n=33&w=333&h=188",
+        "videoId": "lePzGgWA6UA"
+    },
+    {
+        "name": "Eritrea",
+        "capital": "Asmara",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=20174c78521b26aa644e4f3b16013475&ref=rim&n=33&w=250&h=188",
+        "videoId": "svezgqe5fOA"
+    },
+    {
+        "name": "Georgia",
+        "capital": "Tbilisi",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=eb6d86beeede622033caed9c9060b79d&ref=rim&n=33&w=281&h=188",
+        "videoId": "KNUcUBdYT58"
+    },
+    {
+        "name": "Ghana",
+        "capital": "Accra",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=942907d2561aacfe159976f21a0a47a8&ref=rim&n=33&w=300&h=188",
+        "videoId": "Up052rBO0Rs"
+    },
+    {
+        "name": "Hong Kong",
+        "capital": "City of Victoria",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=30ce3732e023c5e35566d4ca5af5ac26&ref=rim&n=33&w=282&h=188",
+        "videoId": "72__Mdioty8"
+    },
+    {
+        "name": "Iraq",
+        "capital": "Baghdad",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=f375f5f511477a1a92c43cb55c47a977&ref=rim&n=33&w=250&h=188",
+        "videoId": "WYN0sWxhlH4"
+    },
+    {
+        "name": "Libya",
+        "capital": "Tripoli",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=0f5f05dc00ebb231e08304e550c0764b&ref=rim&n=33&w=281&h=188",
+        "videoId": "c_PSSrm8OA0"
+    },
+    {
+        "name": "Malaysia",
+        "capital": "Kuala Lumpur",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=540198dbf45a54a9c831bb55571cff14&ref=rim&n=33&w=333&h=188",
+        "videoId": "mtIeLsMbfzg"
+    },
+    {
+        "name": "Mexico",
+        "capital": "Mexico City",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=759fa63a856acc5a15187ff7ce1fed85&ref=rim&n=33&w=333&h=188",
+        "videoId": "n8HTyJPXVug"
+    },
+    {
+        "name": "Nepal",
+        "capital": "Kathmandu",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=7f25bea189a7d6664b5af655f5e9767d&ref=rim&n=33&w=250&h=188",
+        "videoId": "89s6vHB6_Gw"
+    },
+    {
+        "name": "New Zealand",
+        "capital": "Wellington",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=329bbb43ca9a87da7789b9ecaedd34e7&ref=rim&n=33&w=250&h=188",
+        "videoId": "8jypK2U1AM0"
+    },
+    {
+        "name": "San Marino",
+        "capital": "City of San Marino",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=57bd2dcf2de9a67de268390ba25b9616&ref=rim&n=33&w=282&h=188",
+        "videoId": "KLvDb3L1b60"
+    },
+    {
+        "name": "Serbia",
+        "capital": "Belgrade",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=0c63749e79f085c68ef1b9ad4af00b77&ref=rim&n=33&w=282&h=188",
+        "videoId": "8qk6azj_Y78"
+    },
+    {
+        "name": "Seychelles",
+        "capital": "Victoria",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=35be577dba95b149be5c2515b8071f72&ref=rim&n=33&w=293&h=188",
+        "videoId": "mWjcaEZ5-pM"
+    },
+    {
+        "name": "Slovenia",
+        "capital": "Ljubljana",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=a0b3a617f98ce44ebb1de9f5c03cf284&ref=rim&n=33&w=301&h=188",
+        "videoId": "D4HTPcS_xeI"
+    },
+    {
+        "name": "Somalia",
+        "capital": "Mogadishu",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=77a1370c88a8ee12eba059d76397aa98&ref=rim&n=33&w=281&h=188",
+        "videoId": "bfxKAC7ti-A"
+    },
+    {
+        "name": "Sri Lanka",
+        "capital": "Colombo",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=0b10b60377d7297f12444fc839e242ca&ref=rim&n=33&w=281&h=188",
+        "videoId": "q0mbKsKG-ng"
+    },
+    {
+        "name": "Thailand",
+        "capital": "Bangkok",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=01d189556a64fba3e3cc0d8168be58fb&ref=rim&n=33&w=281&h=188",
+        "videoId": "cgdcRl5UY9g"
+    },
+    {
+        "name": "Tonga",
+        "capital": "Nuku'alofa",
+        "countryImage": "https://im0-tub-ru.yandex.net/i?id=3b016ca78151f67612dbf2be92bd7ba5&ref=rim&n=33&w=305&h=188",
+        "videoId": "6_hOerZmU5U"
+    }
+]

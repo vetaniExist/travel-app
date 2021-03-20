@@ -1,0 +1,67 @@
+.profileItemContainer {
+    max-width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid $light-font-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    column-gap: 1em;
+}
+
+.userName {
+    color: $light-font-color;
+}
+
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.userProfile img{
+    width: 25px;
+    height: 25px;
+}
+
+.menu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu svg:hover line { 
+    stroke: #FF385C;
+}
+
+.menuItems {
+    max-width: 250px;
+    position: absolute;
+    top: 2.5em;
+}
+
+.menuIcon {
+    width: 25px;
+    height: 25px;
+    background-image: url('/src/assets/icons/profile_settings.svg');
+    background-repeat: no-repeat;
+}
+.menuIcon:hover {
+    background-image: url('/src/assets/icons/profile-settings_hover.svg');
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.form_input {
+    margin: 15px;
+}

@@ -1,0 +1,43 @@
+@import "./constants";
+
+* {
+    box-sizing: border-box;
+}
+
+body, #app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.card__template {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 370px;
+    height: 370px;
+    margin: 20px 2px;
+    padding: 30px;
+    border: 0 solid;
+    outline: 0 solid;
+    border-radius: 20px;
+    font-size: 24px;
+    color: $light-font-color;
+    box-shadow: 5px 5px 10px 0 rgba(34, 60, 80, 0.2);
+    &_widget {
+        justify-content: flex-start;
+    }
+}
+
+.widgetTextItem {
+    margin: 7px 0;
+}

@@ -1,0 +1,10 @@
+@import '../../../../common/constants.scss';
+
+.logo {
+    & a {
+        color: $main-color;
+        font-weight: bold;
+        font-size: 28px;
+        text-decoration: none;
+    }
+}
