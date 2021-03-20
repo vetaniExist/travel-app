@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Slider from "../Slider/Slider";
 import CountryInfo from "./CountryInfo/CountryInfo";
@@ -9,23 +9,19 @@ import { ICountry } from "../../store.example";
 
 interface CardsProps {
   countriesInfo: ICountry[];
-  language: string;
+  lang: string;
 }
 interface ParamTypes {
   name: string;
 }
 
-function CountryPage({ countriesInfo, language }: CardsProps) {
-  // Tonga
-  /* "lat": -21.13938,
-  "lon": -175.2018 */
+function CountryPage({ countriesInfo, lang }: CardsProps) {
   const { name } = useParams<ParamTypes>();
   const [countryCapitalCoord, setCoord] = useState([-21.13938, -175.2018]);
-  const [country, setCountry] = useState(countriesInfo.find(item => item.name === name) || countriesInfo[0]);
+  const [country, setCountry] = useState(countriesInfo.find((item) => item.name === name) || countriesInfo[0]);
 
-  
   useEffect(() => {
-    fetch("https://travel-app-v.herokuapp.com/api/country/" + name, {
+    fetch("https://travel-app-v.herokuapp.com/api/country/" + name + "/" + lang.toLowerCase(), {
       mode: 'cors',
     })
       .then((data) => data.json())
@@ -44,20 +40,19 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencySymbol: dataJson.currencies[0].symbol,
           iso: dataJson.alpha2Code,
           alpha2Code: dataJson.alpha2Code,
-          timezone: dataJson.timezones[0]
-        }
-
+          timezone: dataJson.timezones[0],
+        };
         setCountry(country);
       });
-  }, []);
+  }, [lang]);
 
   return (
     <div className="countryPage">
-      <Slider country={country} isMainPage={false} />
+      <Slider country={country} isMainPage={false} lang={lang} />
       <div className="wrapper">
-        <CountryInfo country={country} />
+        <CountryInfo country={country} lang={lang} />
         <Map
-          language={language}
+          lang={lang} 
           coord={countryCapitalCoord}
           iso={country.iso}
         />
@@ -68,9 +63,9 @@ function CountryPage({ countriesInfo, language }: CardsProps) {
           currencySymbol={country.currencySymbol}
           timezone={country.timezone}
           countryCode={country.iso}
+          lang={lang}
         />}
        <Video videoId={country.videoId}/>
-       
       </div>
     </div>
   );

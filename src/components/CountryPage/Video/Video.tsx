@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import YouTube from "react-youtube";
 // @ts-ignore
-import { gapi } from "gapi-script";
+/* import { gapi } from "gapi-script"; */
 import "./VideoStyles.scss";
 
 export default function Video({ videoId }) {

@@ -5,7 +5,7 @@ import {
   Placemark,
   FullscreenControl,
   ZoomControl,
-} from 'react-yandex-maps';
+} from "react-yandex-maps";
 import "./MapStyles.scss";
 
 /* lang=ru_RU;
@@ -17,15 +17,14 @@ lang=tr_TR. */
 
 function getAPILanguage(sysLang) {
   switch (sysLang) {
-    case "EN":
-    case "Английский":
-    case "Englisch": {
+    case "EN": {
       return "en_US";
     }
-    case "RU":
-    case "Русский":
-    case "Russisch": {
+    case "RU": {
       return "ru_RU";
+    }
+    case "DE": {
+      return "en_US";
     }
     default: {
       return "en_US";
@@ -36,23 +35,23 @@ function getAPILanguage(sysLang) {
 /* "lat": 10.66668,
   "lon": -61.51889 */
 
-function Map(props) {
+function Map(props:any) {
   const lat = props.coord[0];
   const lon = props.coord[1];
   const mapRef = useRef();
 
   // https://github.com/gribnoysup/react-yandex-maps/issues/186
-  const getRegions = ymaps => {
+  const getRegions = (ymaps) => {
     if (mapRef && mapRef.current) {
       const objectManager = new ymaps.ObjectManager();
-      ymaps.borders.load('001').then(function (result) {
-        const regions = result.features.reduce(function (acc, feature) {
+      ymaps.borders.load("001").then((result) => {
+        const regions = result.features.reduce((acc, feature) => {
           const iso = feature.properties.iso3166;
           feature.id = iso;
           feature.options = {
             fillOpacity: 0.3,
             strokeColor: "#AAA",
-            strokeOpacity: 1
+            strokeOpacity: 1,
           };
 
           acc[iso] = feature;
@@ -66,7 +65,7 @@ function Map(props) {
         paint(regions[props.iso]);
 
         result.features = [];
-        for (let reg in regions) {
+        for (const reg in regions) {
           result.features.push(regions[reg]);
         }
 
@@ -76,12 +75,11 @@ function Map(props) {
     }
   };
 
-
   return (
     <YMaps
-      key={props.language + props.coord}
+      key={props.lang + props.coord}
       query={{
-        lang: getAPILanguage(props.language)
+        lang: getAPILanguage(props.lang)
       }}>
       <div>
         <YMap
@@ -92,7 +90,7 @@ function Map(props) {
           }}
           width={"100%"}
           height={"600px"}
-          onLoad={ymaps => getRegions(ymaps)}
+          onLoad={(ymaps) => getRegions(ymaps)}
           options={{
             minZoom: 2,
             maxZoom: 10,
@@ -101,11 +99,11 @@ function Map(props) {
         >
           <Placemark geometry={[lat, lon]} />
           <FullscreenControl />
-          <ZoomControl options={{ float: 'right' }} />
+          <ZoomControl options={{ float: "right" }} />
         </YMap>
       </div>
     </YMaps >
-  )
+  );
 }
 
 export default Map;

@@ -9,6 +9,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { storeExample } from "../store.example";
 import Context from "./Context";
+import LanguageContext from "./LangContext";
 
 const CountryPage = React.lazy(() => import("./CountryPage/CountryPage"));
 const MainPage = React.lazy(() => import("./MainPage/MainPage"));
@@ -25,7 +26,7 @@ function App() {
 
   useEffect(() => {
     fetch("https://travel-app-v.herokuapp.com/api/countriesList", {
-      mode: 'cors',
+      mode: "cors",
     })
       .then((data) => data.json())
       .then((dataJson) => {
@@ -36,57 +37,41 @@ function App() {
   return (
     <>
       <Context.Provider value={[data, setData, seachData]}>
+        <LanguageContext.Provider value={[language, setLanguage]}>
         <Router>
+
           <Header />
-            <Switch>
-              {/* <Route path="/authorization">
-              <Authorization />
-            </Route>*/}
+
+          {/* <ProfilePage/> */}
+
+          <Switch>
+            {/* <Route path="/authorization">
+              <AuthForm />
+            </Route> */}
+
             <Route path="/country/:name">
             <React.Suspense fallback={<div>Load...</div>}>
               <CountryPage
                 countriesInfo={data}
-                language={language}
+                lang={language}
               />
               </React.Suspense>
             </Route>
             <Route path="/">
-            <React.Suspense fallback={<div>Load...</div>}>
-              <MainPage
-                countriesInfo={data}
-              />
+              <React.Suspense fallback={<div>Load...</div>}>
+                <MainPage
+                  countriesInfo={data}
+                />
               </React.Suspense>
             </Route>
           </Switch>
         </Router>
 
         <Footer />
-
+        </LanguageContext.Provider>
       </Context.Provider>
     </>
   );
 }
 
-/* const App = (): JSX.Element => (
-  <>
-    <Header />
-
-    <Router>
-      <Switch>
-        {<Route path="/authorization">
-          <Authorization />
-        </Route>}
-        <Route path="/country/:id">
-          <CountryPage countriesInfo={storeExample} />
-        </Route>
-        <Route path="/">
-          <MainPage />
-        </Route>
-      </Switch>
-    </Router>
-
-    <Footer />
-  </>
-);
- */
 export default App;

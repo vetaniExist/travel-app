@@ -1,5 +1,9 @@
-import Widgets from "./components/CountryPage/Widgets/Widgets";
-import React from "react";
+interface ISights {
+  id: string;
+  images: any;
+  title: string;
+  description: string;
+}
 
 export interface ICountry {
   id: string,
@@ -16,13 +20,6 @@ export interface ICountry {
   // map: any;
 }
 
-interface ISights {
-  id: string;
-  images: any;
-  title: string;
-  description: string;
-}
-
 // interface IVideo {
 //   id: string;
 //   video: any;
@@ -35,14 +32,14 @@ export const storeExample: ICountry[] = [
     capital: "Rome",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "2",
@@ -50,14 +47,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/829/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "3",
@@ -65,14 +62,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "4",
@@ -80,14 +77,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "5",
@@ -95,14 +92,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "6",
@@ -110,14 +107,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "7",
@@ -125,14 +122,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "8",
@@ -140,14 +137,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "9",
@@ -155,14 +152,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "10",
@@ -170,14 +167,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "11",
@@ -185,14 +182,14 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
   {
     id: "12",
@@ -200,13 +197,13 @@ export const storeExample: ICountry[] = [
     capital: "Paris",
     countryImage: "https://picsum.photos/id/1018/1000/600/",
     countryDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-    + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
-    + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
-    + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
-    + "occaecat cupidatat non proident, "
-    + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+      + "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+      + "aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in "
+      + "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint "
+      + "occaecat cupidatat non proident, "
+      + "sunt in culpa qui officia deserunt mollit anim id est laborum.",
     countryFlagImage: "https://picsum.photos/id/384/200/150/",
-    sights: []
+    sights: [],
   },
 ];
