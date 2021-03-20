@@ -1,39 +1,9 @@
 [
     {
-        "name": "Afghanistan",
-        "capital": "Kabul",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Albania",
-        "capital": "Tirana",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "American Samoa",
-        "capital": "Pago Pago",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Andorra",
-        "capital": "Andorra la Vella",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Australia",
         "capital": "Canberra",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=63e673b84ebee43c1714dfbff3fc1d54&ref=rim&n=33&w=333&h=188",
         "videoId": "PdVLk_dPmtc"
-    },
-    {
-        "name": "Bangladesh",
-        "capital": "Dhaka",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Bermuda",
@@ -48,34 +18,10 @@
         "videoId": "W3DGxLC8kk8"
     },
     {
-        "name": "Canada",
-        "capital": "Ottawa",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "China",
-        "capital": "Beijing",
-        "countryImage": "https://im0-tub-ru.yandex.net/i?id=313e34bdbdfa61694fc32aa5d0022753&ref=rim&n=33&w=333&h=188",
-        "videoId": ""
-    },
-    {
-        "name": "Colombia",
-        "capital": "Bogota",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Costa Rica",
         "capital": "San Jose",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=de6f6f658854e62c9ffd88a8dcf9cc0b&ref=rim&n=33&w=323&h=188",
         "videoId": "EotbKqZmBuY"
-    },
-    {
-        "name": "Croatia",
-        "capital": "Zagreb",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Cuba",
@@ -90,46 +36,16 @@
         "videoId": "YMZ1oNylJ4A"
     },
     {
-        "name": "Denmark",
-        "capital": "Copenhagen",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Dominican Republic",
         "capital": "Santo Domingo",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=3ab7938e7e3b877cdfaa502852b0f133&ref=rim&n=33&w=333&h=188",
         "videoId": "lePzGgWA6UA"
     },
     {
-        "name": "Ecuador",
-        "capital": "Quito",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Egypt",
-        "capital": "Cairo",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Eritrea",
         "capital": "Asmara",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=20174c78521b26aa644e4f3b16013475&ref=rim&n=33&w=250&h=188",
         "videoId": "svezgqe5fOA"
-    },
-    {
-        "name": "Ethiopia",
-        "capital": "Addis Ababa",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Finland",
-        "capital": "Helsinki",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Georgia",
@@ -144,58 +60,10 @@
         "videoId": "Up052rBO0Rs"
     },
     {
-        "name": "Gibraltar",
-        "capital": "Gibraltar",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Greece",
-        "capital": "Athens",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Guam",
-        "capital": "Hagatna",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Guatemala",
-        "capital": "Guatemala City",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Holy See",
-        "capital": "Rome",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Hong Kong",
         "capital": "City of Victoria",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=30ce3732e023c5e35566d4ca5af5ac26&ref=rim&n=33&w=282&h=188",
         "videoId": "72__Mdioty8"
-    },
-    {
-        "name": "Hungary",
-        "capital": "Budapest",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "India",
-        "capital": "New Delhi",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Indonesia",
-        "capital": "Jakarta",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Iraq",
@@ -204,64 +72,10 @@
         "videoId": "WYN0sWxhlH4"
     },
     {
-        "name": "Ireland",
-        "capital": "Dublin",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Italy",
-        "capital": "Rome",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Japan",
-        "capital": "Tokyo",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Jersey",
-        "capital": "Saint Helier",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Jordan",
-        "capital": "Amman",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Kenya",
-        "capital": "Nairobi",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Latvia",
-        "capital": "Riga",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Lebanon",
-        "capital": "Beirut",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Libya",
         "capital": "Tripoli",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=0f5f05dc00ebb231e08304e550c0764b&ref=rim&n=33&w=281&h=188",
         "videoId": "c_PSSrm8OA0"
-    },
-    {
-        "name": "Luxembourg",
-        "capital": "Luxembourg",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Malaysia",
@@ -270,34 +84,10 @@
         "videoId": "mtIeLsMbfzg"
     },
     {
-        "name": "Malta",
-        "capital": "Valletta",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Mexico",
         "capital": "Mexico City",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=759fa63a856acc5a15187ff7ce1fed85&ref=rim&n=33&w=333&h=188",
         "videoId": "n8HTyJPXVug"
-    },
-    {
-        "name": "Monaco",
-        "capital": "Monaco",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Morocco",
-        "capital": "Rabat",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Namibia",
-        "capital": "Windhoek",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Nepal",
@@ -310,48 +100,6 @@
         "capital": "Wellington",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=329bbb43ca9a87da7789b9ecaedd34e7&ref=rim&n=33&w=250&h=188",
         "videoId": "8jypK2U1AM0"
-    },
-    {
-        "name": "Norway",
-        "capital": "Oslo",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Paraguay",
-        "capital": "Asuncion",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Peru",
-        "capital": "Lima",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Philippines",
-        "capital": "Manila",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Puerto Rico",
-        "capital": "San Juan",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Romania",
-        "capital": "Bucharest",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Saint Helena, Ascension and Tristan da Cunha",
-        "capital": "Jamestown",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "San Marino",
@@ -372,12 +120,6 @@
         "videoId": "mWjcaEZ5-pM"
     },
     {
-        "name": "Singapore",
-        "capital": "Singapore",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Slovenia",
         "capital": "Ljubljana",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=a0b3a617f98ce44ebb1de9f5c03cf284&ref=rim&n=33&w=301&h=188",
@@ -390,28 +132,10 @@
         "videoId": "bfxKAC7ti-A"
     },
     {
-        "name": "South Africa",
-        "capital": "Pretoria",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
         "name": "Sri Lanka",
         "capital": "Colombo",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=0b10b60377d7297f12444fc839e242ca&ref=rim&n=33&w=281&h=188",
         "videoId": "q0mbKsKG-ng"
-    },
-    {
-        "name": "Sweden",
-        "capital": "Stockholm",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Taiwan",
-        "capital": "Taipei",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     },
     {
         "name": "Thailand",
@@ -424,23 +148,5 @@
         "capital": "Nuku'alofa",
         "countryImage": "https://im0-tub-ru.yandex.net/i?id=3b016ca78151f67612dbf2be92bd7ba5&ref=rim&n=33&w=305&h=188",
         "videoId": "6_hOerZmU5U"
-    },
-    {
-        "name": "Tunisia",
-        "capital": "Tunis",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Turkey",
-        "capital": "Ankara",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
-    },
-    {
-        "name": "Ukraine",
-        "capital": "Kiev",
-        "countryImage": "https://picsum.photos/id/1018/1000/600/",
-        "videoId": ""
     }
 ]
