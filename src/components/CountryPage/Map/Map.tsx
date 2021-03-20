@@ -17,15 +17,14 @@ lang=tr_TR. */
 
 function getAPILanguage(sysLang) {
   switch (sysLang) {
-    case "EN":
-    case "Английский":
-    case "Englisch": {
+    case "EN": {
       return "en_US";
     }
-    case "RU":
-    case "Русский":
-    case "Russisch": {
+    case "RU": {
       return "ru_RU";
+    }
+    case "DE": {
+      return "en_US";
     }
     default: {
       return "en_US";
@@ -36,7 +35,7 @@ function getAPILanguage(sysLang) {
 /* "lat": 10.66668,
   "lon": -61.51889 */
 
-function Map(props) {
+function Map(props:any) {
   const lat = props.coord[0];
   const lon = props.coord[1];
   const mapRef = useRef();
@@ -78,9 +77,9 @@ function Map(props) {
 
   return (
     <YMaps
-      key={props.language + props.coord}
+      key={props.lang + props.coord}
       query={{
-        lang: getAPILanguage(props.language),
+        lang: getAPILanguage(props.lang)
       }}>
       <div>
         <YMap

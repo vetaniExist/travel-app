@@ -9,7 +9,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { storeExample } from "../store.example";
 import Context from "./Context";
-/* import ProfilePage from "./ProfilePage/ProfilePage"; */
+import LanguageContext from "./LangContext";
 
 const CountryPage = React.lazy(() => import("./CountryPage/CountryPage"));
 const MainPage = React.lazy(() => import("./MainPage/MainPage"));
@@ -37,6 +37,7 @@ function App() {
   return (
     <>
       <Context.Provider value={[data, setData, seachData]}>
+        <LanguageContext.Provider value={[language, setLanguage]}>
         <Router>
 
           <Header />
@@ -49,11 +50,11 @@ function App() {
             </Route> */}
 
             <Route path="/country/:name">
-              <React.Suspense fallback={<div>Load...</div>}>
-                <CountryPage
-                  countriesInfo={data}
-                  language={language}
-                />
+            <React.Suspense fallback={<div>Load...</div>}>
+              <CountryPage
+                countriesInfo={data}
+                lang={language}
+              />
               </React.Suspense>
             </Route>
             <Route path="/">
@@ -67,7 +68,7 @@ function App() {
         </Router>
 
         <Footer />
-
+        </LanguageContext.Provider>
       </Context.Provider>
     </>
   );

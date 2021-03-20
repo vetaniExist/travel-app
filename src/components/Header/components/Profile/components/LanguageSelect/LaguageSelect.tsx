@@ -1,38 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import LanguageCntext from "../../../../../LangContext";
 
-const LANGUAGES = {
-  EN: {
-    en: "EN",
-    ru: "RU",
-    de: "GE",
-  },
-  RU: {
-    en: "Английский",
-    ru: "Русский",
-    de: "Немецкий",
-  },
-  DE: {
-    en: "Englisch",
-    ru: "Russisch",
-    de: "Deutsche",
-  },
-};
+const LANGUAGES = {    
+  en: "EN",
+  ru: "RU",
+  de: "DE"
+}
 
-const LanguageSelect = (props) => {
-  const handleChange = (value: { target: { value: any; }; }) => {
-    props.setLanguage(value.target.value);
-    localStorage.language = value.target.value;
+const LanguageSelect = () => {
+  const [lang, setLang] = useContext(LanguageCntext);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLang(e.target.value);
+    localStorage.language = e.target.value;
   };
 
   return (
     <div className="dropdownContainer">
       <select
-        value={props.language}
+        value={lang}
         onChange={handleChange}
         className='languageContainer'
       >
         {
-          Object.values(LANGUAGES.EN).map((lang, idx) => <option key={idx} value={lang}>{lang}</option>)
+          Object.values(LANGUAGES).map((lang, idx) => <option key={idx} value={lang}>{lang}</option>)
         }
       </select>
     </div>

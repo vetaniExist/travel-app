@@ -4,8 +4,16 @@ import React, {
 import magnifierIcon from "../../../../assets/icons/magnifier_icon.svg";
 import { storeExample, ICountry } from "../../../../store.example";
 import Context from "../../../Context";
+import LanguageCntext from "../../../LangContext";
+
+const textToTranslate = {
+  EN: "Seacrh",
+  RU: "Поиск",
+  DE: "Suche"
+}
 
 const Search = () => {
+  const [lang] = useContext(LanguageCntext);
   const [, setContext, seachData] = useContext(Context);
   const inputEl = useRef<HTMLInputElement | null>(null);
   const buttonEl = useRef<HTMLButtonElement | null>(null);
@@ -63,7 +71,7 @@ const Search = () => {
         ref={inputEl}
         className='inputSearch'
         contentEditable='true'
-        placeholder='Search'
+        placeholder={textToTranslate[lang]}
         value={seach}
         onChange={updateSeach}
       />
